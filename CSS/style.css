@@ -334,11 +334,12 @@ margin-right: 25px;
 
 /******************************** footer  */
 footer{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.932);
     height: 110px;
     justify-content: center;
     display: flex;
     align-items: center;
+    back
 }
 
 footer p{
@@ -348,4 +349,5 @@ footer p{
 
 footer .copy-icon{
   color: aliceblue;
+
 }
