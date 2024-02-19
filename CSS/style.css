@@ -1,17 +1,20 @@
 body {
   font-family: sans-serif;
-  min-width: 100vw;
+  margin: 5px;
 }
 
 a {
   text-decoration: none;
 }
 
+
+/******************************** Header */
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 90px;
+  min-height: 165px;
   background-color: aqua;
   padding: 10px;
 }
@@ -47,10 +50,12 @@ header a:hover {
   transform: scale(1.05);
 }
 
+
+/******************************** Main Page */
+
 .main-container {
-  display: flex;
-  height: 370px;
-  /* width: 100vw; */
+  height: 1105px;
+  display: flex; 
   margin-top: 20px;
   justify-content: space-evenly;
   background-color: aquamarine;
@@ -324,11 +329,23 @@ margin-right: 25px;
 /******************************** footer - Contact me */
 .info-Contact-me {
   height: 790px;
+  text-align: center;
 }
 
 /******************************** footer  */
 footer{
     background-color: black;
-    width: 100vw;
     height: 110px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+footer p{
+  text-align: center;
+  color: aliceblue;
+}
+
+footer .copy-icon{
+  color: aliceblue;
 }
