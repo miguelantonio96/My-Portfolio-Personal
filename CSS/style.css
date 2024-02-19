@@ -1,0 +1,334 @@
+body {
+  font-family: sans-serif;
+  min-width: 100vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90px;
+  background-color: aqua;
+  padding: 10px;
+}
+
+.header-container-log {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.header-container-log > img {
+  height: 50px;
+  margin: 10px;
+}
+
+.menu-nav{
+  margin-right: 20px;
+}
+
+.menu-nav a {
+  margin-right: 10px;
+  display: inline-block;
+  justify-content: space-between;
+  transition: all 0.3s;
+}
+nav a {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+header a:hover {
+  color: azure;
+  transform: scale(1.05);
+}
+
+.main-container {
+  display: flex;
+  height: 370px;
+  /* width: 100vw; */
+  margin-top: 20px;
+  justify-content: space-evenly;
+  background-color: aquamarine;
+}
+
+.main-container div {
+  display: inline-grid;
+  align-items: center;
+  text-align: center;
+}
+
+.main-container img {
+  display: flex;
+  height: 100%;
+}
+
+.list-Social-Media {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-left: 0px;
+    margin-bottom: -60px;
+    transition: all 0.3s;
+}
+
+.list-Social-Media a{
+margin-right: 25px;
+}
+
+.list-Social-Media a:hover {
+  color: azure;
+}
+
+.list-Social-Media img{
+  height: 30px;
+  margin-right: 5px;
+
+
+}
+
+
+
+/******************************** Section 1 - About me */
+
+.Section-1 {
+  height: 385px;
+  margin-top: 20px;
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Section-1 div {
+  display: inline-grid;
+  width: 60%;
+  height: 250px;
+  text-align: left;
+}
+
+
+
+
+
+
+/******************************** Section 2 - */
+.Section-2 {
+  height: 1250px;
+  margin-top: 20px;
+  
+  display: grid;
+  
+}
+
+/* .Skills-and-Hobbies {
+  display: grid;
+  align-items: flex-start;
+  text-align: center;
+  font-size: 28px;
+} */
+
+
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+.Skills-and-Hobbies {
+	  font-family: Raleway, sans-serif;
+    text-align: center;
+    background-color: rgba(10, 12, 18, 1);
+    color: white; 
+    display: grid;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Skills {
+  width: 250px;
+  font-size: 35px;
+  border: 0.35rem solid;
+  padding: 11px;
+  border-image: conic-gradient(from var(--angle), var(--c2), rgb(255 168 168) 0.1turn, rgb(168 255 210) 0.15turn, rgb(255 168 168 / 10%) 0.25turn) 30;
+  animation: borderRotate var(--d) linear infinite forwards;
+}
+
+
+:root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgba(168, 239, 255, 1);
+	--c2: rgba(168, 239, 255, 0.1);
+}
+
+
+
+
+
+.Skills:nth-child(2) {
+	border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+	animation: borderRadial var(--d) linear infinite forwards;
+}
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+}
+
+
+
+
+.Formation-academy {
+  font-size: 30px;
+  text-align: center;
+  background-color: #1e1d1c8f;
+}
+
+
+
+
+
+
+
+/* 
+.tarjeta-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 420px;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius: 15px;
+  font-family: sans-serif;
+}
+.titulo {
+  font-size: 24px;
+  padding: 10px 10px 0 10px;
+}
+.cuerpo {
+  padding: 10px;
+}
+.pie {
+  background: #6699ff;
+  border-radius: 0 0 15px 15px;
+  padding: 10px;
+  text-align: center;
+}
+.pie a {
+  text-decoration: none;
+  color: white;
+}
+.pie a:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
+}
+
+.tarjeta-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 420px;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius: 15px;
+  font-family: sans-serif;
+}
+.titulo {
+  font-size: 24px;
+  padding: 10px 10px 0 10px;
+}
+.cuerpo {
+  padding: 10px;
+}
+.pie {
+  background: #6699ff;
+  border-radius: 0 0 15px 15px;
+  padding: 10px;
+  text-align: center;
+}
+.pie a {
+  text-decoration: none;
+  color: white;
+}
+.pie a:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
+}
+
+
+
+/******************************** Section 3 -  */
+.Section-3 {
+  font-size: 30px;
+  text-align: center;
+  height: 1890px;
+  margin-top: 20px;
+  background-color: yellow;
+}
+
+/******************************** footer - Contact me */
+.info-Contact-me {
+  height: 790px;
+}
+
+/******************************** footer  */
+footer{
+    background-color: black;
+    width: 100vw;
+    height: 110px;
+}
