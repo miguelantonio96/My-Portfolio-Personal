@@ -6,6 +6,11 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: sans-serif;
+  background-image: url(../Img/background-attachment-2.jpg); 
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
 }
 
 a {
@@ -17,17 +22,21 @@ a {
 /******************************** Header */
 
 header {
+  height: 125px;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 125px;
-  width: 100vw;
   background-color: aqua;
   border-bottom: 2px solid brown;
   background: url(../Img/header-bg-Banner.jpeg) no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding: 10px;
   font-size: 18px;
-  /* margin-bottom: 20px !important; */
+
+  
 }
 
 .header-container-log {
@@ -64,7 +73,7 @@ header a:hover {
 /******************************** Main Page */
 
 .main-container {
-  margin-bottom: 20px;
+  margin: 25px; 
   width: 100vw;
   height: 1050px;
   display: flex;
@@ -72,6 +81,7 @@ header a:hover {
   background-image: url(../Img/imagen-mainbackground.jpg); 
   background-position: center;
   background-size: cover;
+  box-shadow: 12px -12px 13px 2px;
 }
 
 .main-container div {
@@ -91,12 +101,13 @@ header a:hover {
 
 .section-about-me {
   height: 1050px;
-  width: 90vw;
-  margin-bottom: 20px;
+  width: 80vw;
+  margin: 25px;
   background-color: bisque;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 12px -12px 13px 2px;
 }
 
 .section-about-me div {
@@ -113,8 +124,8 @@ header a:hover {
 /******************************** section-skills */
 .section-skills {
   height: 1100px;
-  width: 90vw;
-  margin-bottom: 20px;
+  width: 80vw;
+  margin: 25px;
   display: inline-grid;
   background-image: url(../Img/background-skills.jpg);
   background-repeat: no-repeat;
@@ -122,12 +133,12 @@ header a:hover {
   background-size: cover;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: rgb(0, 0, 0);
+  box-shadow: 12px -12px 13px 2px;
 }
 
 .skills-container {
   height: 100%;
-  
   display: flex;
   justify-content: center;
 }
@@ -172,13 +183,14 @@ header a:hover {
 /******************************** Section-Hobbies */
 .section-hobbies {
   height: 1050px;
-  width: 90vw;
-  margin-bottom: 20px;
+  width: 80vw;
+  margin: 25px;
   display: inline-grid;
   background-color: black;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: rgb(0, 0, 0);
+  box-shadow: 12px -12px 13px 2px;
 }
 
 .skills-container {
@@ -226,17 +238,18 @@ header a:hover {
 /******************************** Section - Formation Academy */
 .section-formation {
   height: 1050px;
-  width: 90vw;
-  margin-bottom: 20px;
-  display: inline-grid;
+  width: 80vw;
+  margin: 25px;
+  color: rgb(0, 0, 0);
   background-color: black;
+  display: inline-grid;
   justify-content: center;
   align-items: center;
-  color: white;
   background-image: url(../Img/codingbackground-formation.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  box-shadow: 12px -12px 13px 2px;
 }
 
 .formation-academy-container {
@@ -287,27 +300,31 @@ header a:hover {
 /******************************** Section - Projects */
 .section-projects {
   height: 1050px;
-  width: 90vw;
+  width: 80vw;
+  margin: 25px;
   font-size: 30px;
-  margin-bottom: 20px;
   text-align: center;
   background-color: #405b98;
   background-image: url(../Img/background-workexperience-2.png);
   background-repeat: no-repeat;
-  
+  background-position: center;
+  background-size: cover;
+  box-shadow: 12px -12px 13px 2px;
 }
 
-/******************************** footer - Contact me */
+/********************************  Contact me */
 .section-contact-me {
   height: 1050px;
-  width: 90vw;
-  margin-bottom: 20px;
+  width: 80vw;
+  margin: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: url(../Img/background-contact-me.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  /* background-repeat: no-repeat; */
+  box-shadow: 12px -12px 13px 2px;
 }
 
 .contact-me-container {
@@ -343,10 +360,9 @@ header a:hover {
   display: flex;
   align-items: flex-end;
   left: 70px;
-  /* justify-content: flex-start; */
   padding-left: 0px;
   transition: all 0.3s;
-  /* right: 478px; */
+  
 }
 
 .social-media-container a {
