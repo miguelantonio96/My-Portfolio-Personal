@@ -1,276 +1,630 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="./CSS/reset.css">
-    <link rel="icon" href="Img/m-logo-letter-icon.jpg">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/reset.css" />
+    <link rel="icon" href="Img/m-logo-letter-icon.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lugrasimo&family=Seymour+One&display=swap"
+      rel="stylesheet"
+    />
+
     <title>My Porfolio</title>
   </head>
-    <body>
-   
-        <header id="header-portfolio">           
-            <div>      
-              <a href="#header-portfolio">
-                <nav class="header-container-log">
-                <img src="Img/portfolio-logo-header.png" alt="imagen porfolio">
-                <h2 class="name-porfolio">My porfolio</h2>
-                </nav>
-              </a>          
+
+  <body>
+    <header id="header" class="header-container">
+      <a href="#main-container"
+        ><img
+          id="img-logo"
+          src="Img/m-logo-letter-icon.png"
+          alt="imagen porfolio"
+      /></a>
+    </header>
+    <nav class="navbar-container">
+      <ul class="circle-container">
+        <li class="navbar-item circle">
+          <a href="#section-about-me" class="navigate-menu-letter"
+            >About me</a
+          >
+        </li>
+        <li class="navbar-item circle">
+          <a href="#container-skills-hobbies" class="navigate-menu-letter"
+            >Skills & Hobbies</a
+          >
+        </li>
+        <li class="navbar-item circle">
+          <a href="#section-projects" class="navigate-menu-letter">Projects</a>
+        </li>
+        <li class="navbar-item circle">
+          <a href="#section-formation" class="navigate-menu-letter"
+            >Formation</a
+          >
+        </li>
+        <li class="navbar-item circle">
+          <a href="#section-contact-me" class="navigate-menu-letter"
+            >Contact me</a
+          >
+        </li>
+        <li class="navbar-item circle">
+          <img
+            id="mi-imagen"
+            src="./Img/myphoto-portfolio.png"
+            alt="mi imagen"
+          />
+        </li>
+      </ul>
+    </nav>
+
+    <main class="primary-main-container">
+      <section class="main-container" id="main-container">
+        <div class="main-items">
+          <div class="name-welcome-container">
+            <div class="typing-text">Hi, I'm</div>
+            <div class="full-name-container">
+              <h1 class="first-name">
+                <i class="letter-m">M</i><i class="letter-i">I</i
+                ><i class="letter-g">G</i><i class="letter-u">U</i
+                ><i class="letter-e">E</i><i class="letter-l">L</i>
+              </h1>
+              <h1 class="last-name">CASADO</h1>
             </div>
+            <h2 class="letter-developer">Front-end Developer</h2>
+          </div>
+          <img
+            class="imagen-me"
+            src="./Img/myphoto-portfolio.png"
+            alt="mi imagen"
+          />
+        </div>
+        <div class="paragraph-dynamic-container">
+          <p class="paragraph-dynamic">
+            Actualmente estoy participando del proyecto
+            Oracle ONE en Alura Latam.
+          </p>
+        </div>
+        <div class="my-portfolio-start">
+          <h1 class="name-portfolio">Check my Portfolio</h1>
+          <a href="#section-about-me"
+            ><img src="Img/img-arrows/caret-abajo.png" alt="arrow pointing down"
+          /></a>
+        </div>
+      </section>
 
-            <nav class="menu-nav">
-                <a href="#section-about-me" class="menu-1">About me</a>
-                <a href="#section-skills" class="menu-2">Skills</a>
-                <a href="#section-hobbies" class="menu-3">Hobbies</a>
-                <a href="#section-formation" class="menu-4">Formation</a>
-                <a href="#section-projects" class="menu-5">Projects</a>
-                <a href="#section-contact-me" class="menu-6">contacto@hotmail.com</a>         
-            </nav>
-        </header>
-    
-        
-        <main class="main-container" id="main-container">
-            
-            <div>
-                <h1>Hi, I'm Miguel Antonio Casado Perez and  I am a Front-end Developer</h1>
-                <p>Soy formado en .... lorem ipsum sit amet consectetur y actualmente estoy participando del proyecto Oracle ONE en Alura Latam.</p>
+     
 
-            </div>
-            <img class="imagen-me" src="./Img/mi imagen portfolio.png" alt="mi imagen">
+      <section class="section-about-me" id="section-about-me">
+        <div class="container">
+          <h1>About Me</h1>
+          <p>Hello, I'm Miguel Antonio Casado Perez. I'm an enthusiastic web developer with a passion for creating engaging and functional online experiences. I specialize in front-end development and have experience working with a variety of web technologies.</p>
+          <p>I'm committed to writing clean, modular, and maintainable code that meets modern web standards and provides an exceptional user experience. I have experience working in agile and collaborative teams, and I'm always open to learning and improving my skills.</p>
+          <p>When I'm not coding, I enjoy exploring new technologies, reading about the latest trends in web development, and spending time outdoors with my family and dog.</p>
+      </div>
+      </section>
 
-        </main>
-   
-        <section class="section-about-me" id="section-about-me">
-            
-            <div>
-                <h3>Sobre mi</h3>
-               
-                <p>Lorem ipsum dolor sit amet, consecttur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia. 
-
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia. Aenean sit amet felis venenatis, egestas metus vitae, aliquet metus.</p>
-                <img src="./Img/signedtest.png" rel="signature-test"></img>
-            </div>
-            
-        </section>
-
-
+      <section class="container-skills-hobbies" id="container-skills-hobbies">
         <section class="section-skills" id="section-skills">
-      
-            <div class="skills-container">
-              <h3 class="">Skills</h3>
+          <div class="skills-container">
+            <h1 class="">
+              M<br />Y<br /><br />S<br />
+              K<br />
+              I<br />
+              L<br />
+              L<br />
+              S
+            </h1>
+          </div>
+          
+
+          <div class="cards-skills-container">
+            <div
+              class="card-skills-body"
+              style="border-radius: 100px 10px 10px 100px"
+            >
+              <div class="inside-card-container-1">
+                <img class="card-skills-img-top" src="Img/css-3.png" alt="" />
+                <h4 class="card-skills-title">
+                  <br /><br />C<br />S<br />S<br /><br />3
+                </h4>
+              </div>
+
+              <p class="card-skills-text">Body</p>
             </div>
-      
-            <div class="cards-container">
-              <div class="card-body">
-                <img class="card-img-top" src="Img/css-3.png" alt="" />
-                <div class="card-text">
-                  <h4 class="card-title">CSS</h4>
-                  <p class="card-text-p">Body</p>
-                </div>
+
+            <div
+              class="card-skills-body"
+              style="border-radius: 10px 100px 100px 10px"
+            >
+              <div class="inside-card-container-1">
+                <h4 class="card-skills-title">
+                  <br />H<br />T<br />M<br />L<br /><br />5
+                </h4>
+                <img class="card-skills-img-top" src="Img/html-5.png" alt="" />
               </div>
-      
-              <div class="card-body">
-                <img class="card-img-top" src="Img/html-5.png" alt="" />
-                <div class="card-text">
-                  <h4 class="card-title">HTML 5</h4>
-                  <p class="card-text-p">Body</p>
-                </div>
-              </div>
-      
-              <div class="card-body">
-                <img class="card-img-top" src="Img/js 3.png" alt="" />
-                <div class="card-text">
-                  <h4 class="card-title">Javascript</h4>
-                  <p class="card-text-p">Body</p>
-                </div>
-              </div>
-      
-              <div class="card-body">
-                <img class="card-img-top" src="Img/nodejs.png" alt="" />
-                <div class="card-text">
-                  <h4 class="card-title">Node JS</h4>
-                  <p class="card-text-p">Body</p>
-                </div>
-              </div>
-      
-              <div class="card-body">
-                <img class="card-img-top" src="Img/React-icon.png" alt="" />
-                <div class="card-text">
-                  <h4 class="card-title">React</h4>
-                  <p class="card-text-p">Body</p>
-                </div>
-              </div>
-      
-              <div class="card-body">
-                <img class="card-img-top" src="Img/TS-typeScript.png" alt="" />
-                <div class="card-text">
-                  <h4 class="card-title">Typescript</h4>
-                  <p class="card-text-p">Body</p>
-                </div>
-              </div>
+
+              <p class="card-skills-text">Body</p>
             </div>
-      
-          </section>
 
-          <section class="section-hobbies" id="section-hobbies">  
-
-            <div class="skills-container">
-                <h3 class="">Hobbies</h3>
-              </div>
-            
-
-            <div class="cards-container">
-                <div class="card-body">
-                  <img class="card-img-top" src="Img/cargando.gif" alt="" />
-                  <div class="card-text">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text-p">Body</p>
-                  </div>
-                </div>
-        
-                <div class="card-body">
-                  <img class="card-img-top" src="Img/photo-blank.png" alt="" />
-                  <div class="card-text">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text-p">Body</p>
-                  </div>
-                </div>
-        
-                <div class="card-body">
-                  <img class="card-img-top" src="Img/photo-blank.png" alt="" />
-                  <div class="card-text">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text-p">Body</p>
-                  </div>
-                </div>
-        
-                <div class="card-body">
-                  <img class="card-img-top" src="Img/photo-blank.png" alt="" />
-                  <div class="card-text">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text-p">Body</p>
-                  </div>
-                </div>
-        
-                <div class="card-body">
-                  <img class="card-img-top" src="Img/photo-blank.png" alt="" />
-                  <div class="card-text">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text-p">Body</p>
-                  </div>
-                </div>
-        
-                <div class="card-body">
-                  <img class="card-img-top" src="Img/photo-blank.png" alt="" />
-                  <div class="card-text">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text-p">Body</p>
-                  </div>
-                </div>
+            <div
+              class="card-skills-body"
+              style="border-radius: 100px 10px 10px 100px"
+            >
+              <div class="inside-card-container-1">
+                <img class="card-skills-img-top" src="Img/js 3.png" alt="" />
+                <h4 class="card-skills-title">
+                  <br />J<br />A<br />V<br />A<br />S<br />C<br />R<br />I<br />P<br />T
+                </h4>
               </div>
 
+              <p class="card-skills-text">Body</p>
+            </div>
+
+            <div
+              class="card-skills-body"
+              style="border-radius: 100px 10px 10px 100px"
+            >
+              <div class="inside-card-container-1">
+                <img class="card-skills-img-top" src="Img/nodejs.png" alt="" />
+                <h4 class="card-skills-title">
+                  <br />N<br />O<br />D<br />E<br /><br />J<br />S<br />
+                </h4>
+              </div>
+
+              <p class="card-skills-text">Body</p>
+            </div>
+
+            <div
+              class="card-skills-body"
+              style="border-radius: 10px 100px 100px 10px"
+            >
+              <div class="inside-card-container-1">
+                <h4 class="card-skills-title">
+                  <br />R<br />E<br />A<br />C<br />T<br />
+                </h4>
+                <img
+                  class="card-skills-img-top"
+                  src="Img/React-icon.png"
+                  alt=""
+                />
+              </div>
+
+              <p class="card-skills-text">Body</p>
+            </div>
+
+            <div
+              class="card-skills-body"
+              style="border-radius: 100px 10px 10px 100px"
+            >
+              <div class="inside-card-container-1">
+                <img
+                  class="card-skills-img-top"
+                  src="Img/TS-typeScript.png"
+                  alt="imagen typeScript"
+                />
+                <h4 class="card-skills-title">
+                  <br />T<br />Y<br />P<br />E<br />S<br />C<br />R<br />I<br />P<br />T<br />
+                </h4>
+              </div>
+
+              <p class="card-skills-text">Body</p>
+            </div>
+          </div>
         </section>
 
-        <section class="section-formation" id="section-formation">
-           
-  
-            <div class="formation-academy-container">
-                <h3 class="">Formation Academy</h3>
+        <section class="section-hobbies" id="section-hobbies">
+          <div class="hobbies-container">
+            <h1 class="">M<br />Y<br /><br />H<br />
+              O<br />
+              B<br />
+              B<br />
+              I<br />
+              E<br />
+              S
+            </h1>
+          </div>
+
+          <div class="cards-hobbies-container">
+            <div
+              class="card-hobbies-body"
+              style="border-radius: 10px 100px 100px 10px"
+            >
+              <div class="inside-hobbies-card">
+                <h4 class="card-hobbies-title">
+                  V<br />I<br />D<br />E<br />O<br />
+                  <br />G<br />A<br />M<br />E<br />S
+                </h4>
+                <img
+                  class="card-hobbies-img-top"
+                  src="Img/img-hobbies/hobby-video-games.png"
+                  alt=""
+                />
               </div>
-
-            <div class="cards-container">
-                <div class="card-body">
-                  <img class="card-img-top" src="Img/photo-blank.png" alt="" />
-                  <div class="card-text">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text-p">Body</p>
-                  </div>
-                </div>
-        
-                <div class="card-body">
-                  <img class="card-img-top" src="Img/photo-blank.png" alt="" />
-                  <div class="card-text">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text-p">Body</p>
-                  </div>
-                </div>
-        
-                <div class="card-body">
-                  <img class="card-img-top" src="Img/photo-blank.png" alt="" />
-                  <div class="card-text">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text-p">Body</p>
-                  </div>
-                </div>
-
-        </section> 
-
-        <section class="section-projects" id="section-projects">
-
-            <h1>Work Experience</h1>
-        
-
-
-
-            <div class="projects">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+              <div class="card-hobbies-text">
+                <p class="card-hobbies-text-p">Body</p>
+              </div>
             </div>
 
-        </section>
-
-
-        <section class="section-contact-me" id="#section-contact-me">
-        
-            <section class="contact-me-container">
-                <img src="Img/cargando.gif" alt="imagen contact me">
-                
-                <div class="info-text-container">
-                    <span>
-                        <h2>Contact</h2>
-                        <p>¿Quieres contactarme?
-                            Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
-                    </span>
-                    
-                    <form class="form-container">
-                        <input type="name" placeholder="Full Name">
-                        <input type="email" name="E-mail" id="" placeholder="contact@gmail.com">
-                        <input type="text" name="" id="">
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </form>
-                    <button type="submit" value="Submit">Submit</button>
-                </div>
-            </section>
-        
-        </section>
-
-
-        <footer>          
-            <div class="social-media-container">
-              <img src="./Img/github.png" class="Github" >
-              <li><a href="https://github.com/miguelantonio96">Github</a></li>
-              <img src="./Img/linkedin.png" class="LinkedIn">
-              <li><a href="https://www.linkedin.com/in/miguel-casado-3491572ab/">LinkedIn</a></li>
-              <img src="./Img/curriculum-vitae.png" class="Curriculum">
-              <li><a href="">Curriculum</a></li>
-              <img src="./Img/instagram.png" class="Instagram">
-              <li><a href="">Instagram</a></li>
+            <div
+              class="card-hobbies-body"
+              style="border-radius: 100px 10px 10px 100px"
+            >
+              <div class="inside-hobbies-card">
+                <img
+                  class="card-hobbies-img-top"
+                  src="Img/img-hobbies/hobby-coding.jpeg"
+                  alt=""
+                />
+                <h4 class="card-hobbies-title">
+                  C<br />O<br />D<br />I<br />N<br />G<br />
+                </h4>
+              </div>
+              <div class="card-hobbies-text">
+                <p class="card-hobbies-text-p">Body</p>
+              </div>
             </div>
 
-            <div class="footer-up-portfolio">
-              <a href="#header-portfolio" ><img src="Img/portfolio-logo-header.png" alt="imagen porfolio"></a>
-            </div>   
+            <div
+              class="card-hobbies-body"
+              style="border-radius: 10px 100px 100px 10px"
+            >
+              <div class="inside-hobbies-card">
+                <h4 class="card-hobbies-title">
+                  <br />T<br />i<br />t<br />l<br />e<br />
+                </h4>
+                <img
+                  class="card-hobbies-img-top"
+                  src="Img/img-hobbies/hobby-video-games.png"
+                  alt=""
+                />
+              </div>
+              <div class="card-hobbies-text">
+                <p class="card-hobbies-text-p">Body</p>
+              </div>
+            </div>
 
-            <div class="copy-icon">
-              <em>&copy;</em>
-              <p>Copyright by Miguel Casado - 2024</p>
-            </div>     
-        </footer>
-            
-        <script src="./Js/app.js"></script>
-    </body>
+            <div
+              class="card-hobbies-body"
+              style="border-radius: 10px 100px 100px 10px"
+            >
+              <div class="inside-hobbies-card">
+                <h4 class="card-hobbies-title">
+                  <br />T<br />i<br />t<br />l<br />e<br />
+                </h4>
+                <img
+                  class="card-hobbies-img-top"
+                  src="Img/img-hobbies/hobby-video-games.png"
+                  alt=""
+                />
+              </div>
+              <div class="card-hobbies-text">
+                <p class="card-hobbies-text-p">Body</p>
+              </div>
+            </div>
+
+            <div
+              class="card-hobbies-body"
+              style="border-radius: 100px 10px 10px 100px"
+            >
+              <div class="inside-hobbies-card">
+                <img
+                  class="card-hobbies-img-top"
+                  src="Img/img-hobbies/hobby-video-games.png"
+                  alt=""
+                />
+                <h4 class="card-hobbies-title">
+                  <br />T<br />i<br />t<br />l<br />e<br />
+                </h4>
+              </div>
+              <div class="card-hobbies-text">
+                <p class="card-hobbies-text-p">Body</p>
+              </div>
+            </div>
+
+            <div
+              class="card-hobbies-body"
+              style="border-radius: 10px 100px 100px 10px"
+            >
+              <div class="inside-hobbies-card">
+                <h4 class="card-hobbies-title">
+                  <br />T<br />i<br />t<br />l<br />e<br />
+                </h4>
+                <img
+                  class="card-hobbies-img-top"
+                  src="Img/img-hobbies/hobby-video-games.png"
+                  alt=""
+                />
+              </div>
+              <div class="card-hobbies-text">
+                <p class="card-hobbies-text-p">Body</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="section-projects-container">
+        <div class="section-projects" id="section-projects">
+          <h1>Work Experience</h1>
+
+          <div class="projects">
+            <div class="div project-1">
+              <iframe
+                src="Img/img-pjg-projects/Mike Console - Challenge - Google Chrome 2024-03-18 20-19-37.mp4"
+                width="1200"
+                height="420"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+              <span>
+                <h3>title</h3>
+                <p>text</p>
+                <article class="projects-button">
+                  <button class="btn-reposit">reposit</button>
+                  <button class="btn-demo">See Demo</button>
+                </article>
+              </span>
+            </div>
+            <div class="div project-2">
+              <iframe
+                src="Img/img-pjg-projects/Challenge - Encrypt One - Google Chrome 2024-03-21 20-15-59.mp4"
+                width="1200"
+                height="420"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+              <span>
+                <h3>title</h3>
+                <p>text</p>
+                <article class="projects-button">
+                  <button class="btn-reposit">reposit</button>
+                  <button class="btn-demo">See Demo</button>
+                </article>
+              </span>
+            </div>
+            <div class="div project-3">
+              <iframe
+                src="Img/img-pjg-projects/Mike Console - Challenge - Google Chrome 2024-03-18 20-19-37.mp4"
+                width="1200"
+                height="420"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+              <span>
+                <h3>title</h3>
+                <p>text</p>
+                <article class="projects-button">
+                  <button class="btn-reposit">reposit</button>
+                  <button class="btn-demo">See Demo</button>
+                </article>
+              </span>
+            </div>
+            <div class="div project-4">
+              <iframe
+                src="Img/img-pjg-projects/Mike Console - Challenge - Google Chrome 2024-03-18 20-19-37.mp4"
+                width="1200"
+                height="420"
+                frameborder="0"
+                allow="autoplay"
+                allowfullscreen
+              ></iframe>
+              <span>
+                <h3>title</h3>
+                <p>text</p>
+                <article class="projects-button">
+                  <button class="btn-reposit">reposit</button>
+                  <button class="btn-demo">See Demo</button>
+                </article>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-formation" id="section-formation">
+        <!-- formation tittle -->
+        <div class="formation-academy-container">
+          <h3 class="">Formation Academy</h3>
+        </div>
+        <!-- formation container -->
+        <div class="formations-container">
+          <div class="Alura-container">
+            <!-- Alura Latam -->
+            <div class="slider-container">
+              <ul class="slider-items" id="slider">
+                <li class="card-imagen-1">
+                  <img
+                    class="card-img-top"
+                    src="Img/img-formation/Lógica de programación.jpg"
+                    alt=""
+                  />
+                </li>
+
+                <li class="card-imagen-1">
+                  <img
+                    class="card-img-top"
+                    src="Img/img-formation/LinkedIn-Como hacer que tu perfil trabaje por ti.jpg"
+                    alt=""
+                  />
+                </li>
+
+                <li class="card-imagen-1">
+                  <img
+                    class="card-img-top"
+                    src="Img/img-formation/Curso HTTP - La base de internet - Alura.jpg"
+                    alt=""
+                  />
+                </li>
+              </ul>
+            </div>
+
+            <!-- Card text container -->
+            <ul class="card-text-container">
+              <span class="arrow-left" id="arrow-left"><</span>
+              <span class="arrow-right" id="arrow-right">></span>
+
+              <li class="card-text-box">
+                <h4 class="card-title">Alura Latam</h4>
+                <p class="card-text-p">From Jan 10 to Jul 20 - 2024</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="Alura-container">
+            <!-- Alura Latam -->
+            <div class="slider-container">
+              <ul class="slider-items" id="slider">
+                <li class="card-imagen-2">
+                  <img
+                    class="card-img-top"
+                    src="Img/img-formation/Curso HTTP - La base de internet - Alura.jpg"
+                    alt=""
+                  />
+                </li>
+
+                <li class="card-imagen-2">
+                  <img
+                    class="card-img-top"
+                    src="Img/img-formation/Lógica de programación.jpg"
+                    alt=""
+                  />
+                </li>
+
+                <li class="card-imagen-2">
+                  <img
+                    class="card-img-top"
+                    src="Img/img-formation/LinkedIn-Como hacer que tu perfil trabaje por ti.jpg"
+                    alt=""
+                  />
+                </li>
+              </ul>
+            </div>
+            <!-- Card text container -->
+            <ul class="card-text-container">
+              <span class="arrow-left" id="arrow-left"><</span>
+              <span class="arrow-right" id="arrow-right">></span>
+
+              <li class="card-text-box">
+                <h4 class="card-title">Alura Latam</h4>
+                <p class="card-text-p">From Jan 10 to Jul 20 - 2024</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="Alura-container">
+            <!-- Alura Latam -->
+            <div class="slider-container">
+              <ul class="slider-items" id="slider">
+                <li class="card-imagen-3">
+                  <img
+                    class="card-img-top"
+                    src="Img/img-formation/Lógica de programación.jpg"
+                    alt=""
+                  />
+                </li>
+
+                <li class="card-imagen-3">
+                  <img
+                    class="card-img-top"
+                    src="Img/img-formation/Curso HTTP - La base de internet - Alura.jpg"
+                    alt=""
+                  />
+                </li>
+
+                <li class="card-imagen-3">
+                  <img
+                    class="card-img-top"
+                    src="Img/img-formation/LinkedIn-Como hacer que tu perfil trabaje por ti.jpg"
+                    alt=""
+                  />
+                </li>
+              </ul>
+            </div>
+            <!-- Card text container -->
+            <ul class="card-text-container">
+              <span class="arrow-left" id="arrow-left"><</span>
+              <span class="arrow-right" id="arrow-right">></span>
+
+              <li class="card-text-box">
+                <h4 class="card-title">Alura Latam</h4>
+                <p class="card-text-p">From Jan 10 to Jul 20 - 2024</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-contact-me" id="section-contact-me">
+        <div class="contact-me-container">
+          <div class="contact-us-social-media-container">
+            <img src="Img/contact-us-imagen.png" alt="imagen contact me" />
+
+            <span class="social-media-container">
+              <a href="https://github.com/miguelantonio96"
+                ><img src="./Img/github.png" class="Github" />
+                <li>Github</li></a
+              >
+              <a href="https://www.linkedin.com/feed/?trk=404_page"
+                ><img src="./Img/linkedin.png" class="LinkedIn" />
+                <li>LinkedIn</li></a
+              >
+              <a href=""
+                ><img src="./Img/curriculum-vitae.png" class="Curriculum" />
+                <li>Curriculum</li></a
+              >
+              <a href=""
+                ><img src="./Img/instagram.png" class="Instagram" />
+                <li>Instagram</li></a
+              >
+            </span>
+          </div>
+
+          <div class="info-text-container">
+            <span>
+              <h2>Contact me</h2>
+              <p>
+                Do you want to contact me? Please fill out the form below and I
+                will contact you as soon as possible.
+              </p>
+            </span>
+
+            <form class="form-container">
+              <input type="name" placeholder="Full Name" />
+              <input
+                type="email"
+                name="E-mail"
+                id=""
+                placeholder="contact@gmail.com"
+              />
+              <input type="text" name="" id="" />
+              <textarea name="" id="" cols="30" rows="10"></textarea>
+            </form>
+            <button type="submit" value="Submit">Submit</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="my-footer">
+      <a class="footer-up-portfolio" href=""
+        ><img src="Img/m-logo-letter-icon.png" alt="imagen porfolio"
+      /></a>
+
+      <div class="copy-icon">
+        <em>&copy;</em>
+        <p>Copyright by Miguel Casado - 2024</p>
+      </div>
+    </footer>
+    <script src="./Js/app.js"></script>
+  </body>
 </html>
