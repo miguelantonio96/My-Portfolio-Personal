@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>My Porfolio</title>
     <link rel="stylesheet" href="./CSS/style.css" />
     <link rel="stylesheet" href="./CSS/reset.css" />
     <link rel="icon" href="Img/m-logo-letter-icon.jpg" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,7 +25,7 @@
       rel="stylesheet"
     />
 
-    <title>My Porfolio</title>
+    
   </head>
 
   <body>
@@ -33,7 +37,9 @@
           alt="imagen porfolio"
       /></a>
     </header>
+    <button class="btn-open-menu"><i class="bi bi-list"></i></i></button>
     <nav class="navbar-container">
+      <span class="btn-close-menu"><i class="bi bi-x-square"></i></span>
       <ul class="circle-container">
         <li class="navbar-item circle">
           <a href="#section-about-me" class="navigate-menu-letter"
@@ -74,12 +80,8 @@
           <div class="name-welcome-container">
             <div class="typing-text">Hi, I'm</div>
             <div class="full-name-container">
-              <h1 class="first-name">
-                <i class="letter-m">M</i><i class="letter-i">I</i
-                ><i class="letter-g">G</i><i class="letter-u">U</i
-                ><i class="letter-e">E</i><i class="letter-l">L</i>
-              </h1>
-              <h1 class="last-name">CASADO</h1>
+              <h1 class="first-name">MIGUEL</h1>
+              <h2 class="last-name">CASADO</h2>
             </div>
             <h2 class="letter-developer">Front-end Developer</h2>
           </div>
@@ -626,5 +628,6 @@
       </div>
     </footer>
     <script src="./Js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
