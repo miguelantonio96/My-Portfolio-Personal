@@ -191,14 +191,15 @@ let navBarItemContainer = document.querySelector(".circle-container");
 let navBarItemImagen = document.getElementById("mi-imagen");
 let logo = document.getElementById("img-logo");
 const header = document.getElementById('header');
-const btnOpenNav = document.querySelector(".btn-open-menu");
-// const btnCloseNav = document.querySelector(".btn-close-menu");
+const btnNavOpenClosed = document.querySelector(".btn-open-menu");
+
 
 
 window.addEventListener("scroll", () => {
   let scrollPosition = window.scrollY;
-
-  if (scrollPosition > 1200) {
+let screenWidth = window.screenX
+console.log(screenWidth)
+  if (scrollPosition > 1200 && screenWidth < 1307) {
     navBarItemImagen.style.display = "flex";
     navBarContainer.classList.remove("navbar-container");
     navBarContainer.classList.add("navbar-container-2");
@@ -223,26 +224,18 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// window.addEventListener('resize', ()=>{
 
-//   if (window.screenX < 1240) {
-//     btnOpenNav.style.display = "none";
-//   } else {
-//     btnOpenNav.style.display = "block";
-//   }
-
-// })
-
-btnOpenNav.addEventListener("click", () => {
+btnNavOpenClosed.addEventListener("click", () => {
   navBarContainer.classList.toggle("navbar-container-visible");
-  console.log(btnOpenNav.children)
-  btnOpenNav.children[0].classList.toggle('bi-list')
-  btnOpenNav.children[0].classList.toggle('bi-x-square')
-
+  btnNavOpenClosed.children[0].classList.toggle('bi-list')
+  btnNavOpenClosed.children[0].classList.toggle('bi-x-square')
 
 });
-// btnCloseNav.addEventListener("click", () => {
-//   navBarContainer.classList.remove("navbar-container-visible");
-//   // btnOpenNav.style.display = "block";
-//   // btnCloseNav.style.display = "none";
-// });
+
+// window.addEventListener('click', ()=>{
+//   if (window.target !== navBarItemContainer){
+//     navBarContainer.classList.remove('navbar-container-visible')
+//   }
+
+
+// })
