@@ -463,6 +463,7 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  transition: all 300ms ease-in-out;
 }
 
 .card-skills-body:hover {
@@ -494,8 +495,6 @@ a {
 /******************************** Section-Hobbies */
 .section-hobbies {
   width: 80%;
-
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -537,13 +536,14 @@ a {
   flex-direction: column;
   justify-content: center;
   background-color: #ffffff;
-  box-shadow: 0px 0px 12px 1px #ffe4c491;
+  
   padding: 15px;
   align-items: center;
 }
 
 .card-hobbies-body:hover {
   transform: scale(1.05);
+  box-shadow: 0px 0px 12px 1px #ffe4c491;
 }
 
 .card-hobbies-img-top {
@@ -788,52 +788,41 @@ a {
   z-index: 2;
 }
 
-.arrow-left {
-  width: 55px;
-  font-weight: 700;
-  /* top: 40%; */
-  left: 35px;
+.bi-arrow-left-circle-fill {
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
   position: absolute;
   font-size: 3.5rem;
-  font-family: monospace;
   color: white;
-  background-color: #ffffff45;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 200ms ease-in-out;
+  left: 35px;
+  bottom: 0;
 }
-.arrow-left:hover {
+
+.bi-arrow-left-circle-fill:hover {
   transform: scale(1.2);
   background-color: #ffffff86;
 }
-.arrow-left:active {
+.bi-arrow-left-circle-fill:active {
   transform: scale(0.8);
 }
 
-.arrow-right {
-  width: 55px;
-  font-weight: 700;
-  /* top: 40%; */
-  right: 35px;
+.bi-arrow-right-circle-fill {
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
   position: absolute;
   font-size: 3.5rem;
-  font-family: monospace;
   color: white;
-  background-color: #ffffff45;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  right: 35px;
+  bottom: 0;
 }
 
-.arrow-right:hover {
+.bi-arrow-right-circle-fill:hover {
   transform: scale(1.2);
   background-color: #ffffff86;
 }
-.arrow-right:active {
+.bi-arrow-right-circle-fill:active {
   transform: scale(0.8);
 }
 
@@ -1321,6 +1310,9 @@ footer .copy-icon {
   }
 
   /******************************** section-About-me */
+  .section-about-me {
+    height: 70dvh;
+  }
 
   .section-about-me div {
     width: 85vw;
@@ -1337,21 +1329,66 @@ footer .copy-icon {
 
   /******************************** section-skills-and-hobbies */
   .container-skills-hobbies {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: flex-start;
   }
 
-  .card-skills-body {
-    width: 300px;
-    height: 400px;
-
+  .section-skills {
+    width: 80%;
+    padding: 20px;
     border-radius: 20px;
   }
 
-  /******************************** section-Formation */
+  .cards-skills-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card-skills-body {
+    flex-grow: 0;
+    width: 200px;
+    height: 275px;
+    flex-wrap: nowrap;
+    border-radius: 20px;
+  }
+
+  .card-skills-img-top {
+    width: 70%;
+    margin: 0px;
+  }
+
+  .card-skills-title {
+    font-size: 1.5rem;
+}
+
+/*---------------- Hobbies */
+
+.section-hobbies {
+  width: 80%;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.cards-hobbies-container {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-hobbies-body {
+  flex-grow: 0;
+  width: 200px;
+  height: 275px;
+  flex-wrap: nowrap;
+  border-radius: 20px;
+}
+
+.card-hobbies-img-top {
+  width: 70%;
+  margin: 0px;
+}
+
+.card-hobbies-title {
+  font-size: 1.5rem;
+}
+  /******************************** section-Projects */
   .section-projects {
     width: 85vw;
   }
@@ -1385,4 +1422,54 @@ footer .copy-icon {
     flex-direction: column;
     align-items: flex-start;
   }
+
+ /******************************** section-Formation */
+
+ .section-formation {
+  
+ }
+ .formations-container {
+  width: 80%;
+  flex-direction: column;
+  gap: 25px;
+ }
+
+ .Alura-container {
+  width: 100%;
+  padding: 10px;
+ }
+ .slider-container {
+  width: 85%;
+ }
+
+ .card-text-container {
+  width: 100%;
+}
+
+ .bi-arrow-left-circle-fill {
+  border-radius: 50%;
+  position: absolute;
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.bi-arrow-right-circle-fill {
+  border-radius: 50%;
+  position: absolute;
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.card-text-box h4 {
+  font-size: 5vw;
+  margin: 10px;
+}
+.card-text-p{
+  font-size: 3vw;
+}
+
+
 }
