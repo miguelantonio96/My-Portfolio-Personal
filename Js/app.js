@@ -190,15 +190,13 @@ let navBarContainer = document.querySelector(".navbar-container");
 let navBarItemContainer = document.querySelector(".circle-container");
 let navBarItemImagen = document.getElementById("mi-imagen");
 let logo = document.getElementById("img-logo");
-const header = document.getElementById('header');
+const header = document.getElementById("header");
 const btnNavOpenClosed = document.querySelector(".btn-open-menu");
-
-
 
 window.addEventListener("scroll", () => {
   let scrollPosition = window.scrollY;
-let screenWidth = window.screenX
-console.log(screenWidth)
+  let screenWidth = window.screenX;
+  console.log(screenWidth);
   if (scrollPosition > 1200 && screenWidth < 1307) {
     navBarItemImagen.style.display = "flex";
     navBarContainer.classList.remove("navbar-container");
@@ -206,11 +204,12 @@ console.log(screenWidth)
 
     navBarItemContainer.classList.remove("circle-container");
     navBarItemContainer.classList.add("navbar-item-container");
-    header.style.display = 'flex';
+    header.style.display = "flex";
     logo.style.display = "unset";
-    
-    
 
+    if (screenWidth <= 680) {
+      navBarContainer.classList.remove("navbar-container-2");
+    }
   } else {
     navBarItemImagen.style.display = "none";
     navBarContainer.classList.remove("navbar-container-2");
@@ -219,23 +218,19 @@ console.log(screenWidth)
     navBarItemContainer.classList.remove("navbar-item-container");
     navBarItemContainer.classList.add("circle-container");
     logo.style.display = "none";
-    header.style.display = 'none';
-   
+    header.style.display = "none";
   }
 });
 
-
 btnNavOpenClosed.addEventListener("click", () => {
   navBarContainer.classList.toggle("navbar-container-visible");
-  btnNavOpenClosed.children[0].classList.toggle('bi-list')
-  btnNavOpenClosed.children[0].classList.toggle('bi-x-square')
-
+  btnNavOpenClosed.children[0].classList.toggle("bi-list");
+  btnNavOpenClosed.children[0].classList.toggle("bi-x-square");
 });
 
 // window.addEventListener('click', ()=>{
 //   if (window.target !== navBarItemContainer){
 //     navBarContainer.classList.remove('navbar-container-visible')
 //   }
-
 
 // })
