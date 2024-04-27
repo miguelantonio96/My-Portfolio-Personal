@@ -198,6 +198,7 @@ window.addEventListener("scroll", () => {
   let screenWidth = window.screenX;
   console.log(screenWidth);
   if (scrollPosition > 1200 && screenWidth < 1307) {
+    
     navBarItemImagen.style.display = "flex";
     navBarContainer.classList.remove("navbar-container");
     navBarContainer.classList.add("navbar-container-2");
@@ -207,9 +208,9 @@ window.addEventListener("scroll", () => {
     header.style.display = "flex";
     logo.style.display = "unset";
 
-    if (screenWidth <= 680) {
-      navBarContainer.classList.remove("navbar-container-2");
-    }
+    
+
+
   } else {
     navBarItemImagen.style.display = "none";
     navBarContainer.classList.remove("navbar-container-2");
@@ -220,6 +221,14 @@ window.addEventListener("scroll", () => {
     logo.style.display = "none";
     header.style.display = "none";
   }
+
+
+  // if (screenWidth >= 681) {
+  //   navBarContainer.classList.remove("navbar-container-2");
+  // }else{
+  //   navBarContainer.classList.add("navbar-container-2");
+  // }
+
 });
 
 btnNavOpenClosed.addEventListener("click", () => {

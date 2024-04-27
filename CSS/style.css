@@ -3,11 +3,10 @@ html {
 }
 
 body {
-  width: 100%;
-  height: 100vh;
-  font-family: sans-serif;
-  overflow: auto;
+  width: 100dvw;
   box-sizing: border-box;
+  font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -19,6 +18,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 /******************************** Header */
@@ -39,10 +39,10 @@ a {
 
 #img-logo {
   display: none;
+  height: 90%;
   padding: 10px;
   border-radius: 20px;
   background-color: #161616;
-  height: 70%;
   box-shadow: 8px 12px 14px -1px black;
 }
 
@@ -93,7 +93,7 @@ a {
   top: 50px;
   position: fixed;
   z-index: 1;
-  animation: navBarTranslated 2s ease;
+  animation: navBarTranslated 3s ease-in;
 }
 
 @keyframes navBarTranslated {
@@ -150,14 +150,13 @@ a {
   align-items: flex-start;
   justify-content: space-evenly;
   flex-direction: column;
-  background-image: url(../Img/abstract-geometric-background-black-and-white-vector-7762856.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   color: #faebd7;
+  background-color: #4e121259;
+  z-index: -1;
 }
 
 .main-items {
-  width: 62%;
+  width: 70%;
   height: 80%;
   display: flex;
   align-items: center;
@@ -172,10 +171,10 @@ a {
 }
 
 .imagen-me {
-  border-radius: 20%;
+  border-radius: 2%;
   height: 30dvw;
-  background: linear-gradient(#414141, black);
-  box-shadow: inset 4px -4px 14px 2px #626060;
+  background: linear-gradient(#0a030385, #5e494973);
+  box-shadow: 8px 6px 14px 0px #000000, inset 8px 0px 12px 0px #626060;
   animation: OpacityMyImagen 6s;
 }
 
@@ -193,6 +192,7 @@ a {
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
+  color: #9a9afe;
   font-size: 4dvw;
   font-weight: 800;
   font-style: normal;
@@ -200,7 +200,7 @@ a {
   /* animation */
   left: 0px;
   position: relative;
-  animation: scalingName 3s;
+  animation: moveFromLeft 3s;
 }
 
 @keyframes scalingName {
@@ -239,7 +239,7 @@ a {
   margin-bottom: 15px;
   font-weight: 800;
   color: #5555ff;
-  font-size: 3dvw;
+  font-size: 4dvw;
   animation: OpacityMyImagen 6s;
 }
 
@@ -255,10 +255,12 @@ a {
 
 @keyframes moveFromLeft {
   0% {
-    transform: translateX(-200%);
+    opacity: 0;
+    transform: translateX(-100%);
   }
 
   100% {
+    opacity: 1;
     transform: translateX(0%);
   }
 }
@@ -310,7 +312,7 @@ a {
 }
 
 .circle-container > .circle a {
-  color: #828387;
+  color: #faebd7;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
@@ -333,11 +335,21 @@ a {
 
 /******************************** My portfolio start */
 .my-portfolio-start {
+  height: 12%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: transparent;
+  animation: CheckDownOpacity 5s;
+}
+
+@keyframes CheckDownOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .name-portfolio {
@@ -360,7 +372,7 @@ a {
 }
 
 .arrow-down-circle {
-  font-size: 3rem;
+  font-size: 4rem;
   cursor: pointer;
   color: #5555ff;
   animation: bounceUpDown 0.9s ease-in-out infinite alternate;
@@ -372,7 +384,7 @@ a {
   }
 
   to {
-    transform: translateY(25%);
+    transform: translateY(15%);
   }
 }
 
@@ -380,7 +392,7 @@ a {
 
 .section-about-me {
   height: 100dvh;
-  background: linear-gradient(#5555ff, black);
+  background: linear-gradient(#4e121259, #5555ff);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -405,27 +417,41 @@ a {
 
 /******************************** section-skills-and-hobbies */
 
-.container-skills-hobbies {
-  /* height: 100dvh; */
+.skills-hobbies-container {
   width: 100%;
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding-block: 60px;
   align-items: center;
-  background: linear-gradient(black, #5555ff, white);
+  background: linear-gradient(#5555ff, #4e121259);
+}
+
+.article-SkHb-titles {
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.article-SkHb-content {
+  width: 100%;
+  gap: 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /******************************** section-skills */
 .section-skills {
-  width: 80%;
+  width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px 40px 50px;
+  padding: 40px 0 40px 0;
   color: #000000;
   background-color: white;
-  border-radius: 50px 50px 0px 50px;
+  border-radius: 50px;
   flex-direction: column;
 }
 
@@ -446,23 +472,22 @@ a {
 .cards-skills-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: end;
   gap: 40px;
   color: white;
 }
 
 .card-skills-body {
   flex-grow: 1;
-  width: 290px;
+  /* width: 290px; */
   height: 400px;
-  display: flex;
   padding: 15px;
-  background-color: #000000;
-  flex-direction: column;
-  text-align: center;
+  display: flex;
   flex-wrap: wrap;
+  text-align: center;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #000000;
   transition: all 300ms ease-in-out;
 }
 
@@ -471,7 +496,7 @@ a {
   box-shadow: 0px 0px 13px 2px #363535;
 }
 
-.inside-card-container-1 {
+.inside-skills-card {
   height: 350px;
   display: flex;
   justify-content: space-around;
@@ -479,7 +504,7 @@ a {
 }
 
 .card-skills-img-top {
-  width: 75%;
+  width: 60%;
   margin: 10px;
 }
 
@@ -494,14 +519,14 @@ a {
 
 /******************************** Section-Hobbies */
 .section-hobbies {
-  width: 80%;
+  width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 50px 40px 20px;
+  padding: 40px 0 40px 0;
   color: #000000;
   background-color: black;
-  border-radius: 0px 50px 50px 50px;
+  border-radius: 50px;
   flex-direction: column;
 }
 
@@ -518,27 +543,29 @@ a {
   padding-inline: 25px;
 }
 
+/* Card container */
 .cards-hobbies-container {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
   gap: 40px;
   color: #000000;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .card-hobbies-body {
   flex-grow: 1;
-  width: 290px;
+  /* width: 290px; */
   height: 400px;
+  padding: 15px;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
   flex-direction: column;
   justify-content: center;
-  background-color: #ffffff;
-  
-  padding: 15px;
   align-items: center;
+  background-color: #ffffff;
+  transition: all 300ms ease-in-out;
 }
 
 .card-hobbies-body:hover {
@@ -547,8 +574,8 @@ a {
 }
 
 .card-hobbies-img-top {
-  width: 85%;
-  margin: 20px;
+  width: 75%;
+  margin: 10px;
 }
 
 .card-hobbies-text {
@@ -570,78 +597,111 @@ a {
 /******************************** Section - Projects */
 
 .section-projects-container {
+  margin-block: 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(#ffffff, black);
+  background: linear-gradient(#ffffff, transparent);
 }
 
 .section-projects {
   display: flex;
   flex-direction: column;
-  width: 80vw;
-  margin: 25px;
+  align-items: center;
+  width: 100%;
+
   gap: 50px;
 }
 
 .section-projects h1 {
   font-weight: 900;
   padding: 20px;
-  font-size: 3.1rem;
-  color: #000000;
+  font-size: 4rem;
+  color: #2b2b82;
   text-align: center;
 }
 
 .projects {
+  width: 90%;
   gap: 25px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
 
-.projects div {
-  width: 100%;
+.projects .project {
+  position: relative;
+  width: 50%;
+  padding: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  align-content: center;
+  overflow: hidden;
   border-radius: 15px;
   background-color: #1f1f1f;
+  flex-direction: column;
 }
 
-.projects iframe {
-  border-radius: 20px;
-  margin: 15px;
+.projects .project:nth-child(odd) {
+  align-self: flex-end;
 }
 
-.project-1 {
-  flex-direction: row;
+.projects .project:nth-child(even) {
+  align-self: flex-start;
 }
 
-.project-2 {
-  flex-direction: row-reverse;
+.project-title-container {
+  position: absolute;
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.project-3 {
-  flex-direction: row;
+.video-item {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
-
-.project-4 {
-  flex-direction: row-reverse;
+.projects .project:hover span {
+  transform: translateY(0%);
 }
 
 .projects span {
-  width: 38%;
-  height: 40%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
+  align-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  height: 40%;
   justify-content: space-evenly;
-  margin: 0 auto;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+  z-index: 1;
 }
+
+.projects-btn-bg {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 1, 1) 100%
+  ) !important;
+  opacity: 0.6 !important;
+  height: 100% !important;
+  width: 100% !important;
+  position: absolute !important;
+  z-index: 0 !important;
+  left: 0 !important;
+  top: 0 !important;
+}
+
 .projects span h3 {
   font-size: 1.5rem;
   color: white;
@@ -652,18 +712,15 @@ a {
 }
 
 .projects-button {
-  height: 45px;
   display: flex;
-  flex-wrap: wrap;
   gap: 15px;
-  align-content: center;
 }
 
 .btn-reposit {
   height: 45px;
   width: 150px;
   padding: 10px 20px;
-  font-size: 18px;
+  font-size: 0.8dvw;
   font-weight: bold;
   border: none;
   color: #2a7ae4;
@@ -680,7 +737,7 @@ a {
   height: 45px;
   width: 150px;
   padding: 10px 20px;
-  font-size: 18px;
+  font-size: 0.8dvw;
   font-weight: bold;
   border: none;
   color: white;
@@ -697,15 +754,13 @@ a {
 /******************************** Section - Formation Academy */
 
 .section-formation {
-  height: 1280px;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  color: rgb(0, 0, 0);
-  background-color: black;
-  background-size: 100% 1047px;
+  margin-block: 20px;
+  color: #000000;
 }
 
 .formations-container {
@@ -736,7 +791,7 @@ a {
 }
 
 .slider-container {
-  border-radius: 75px;
+  border-radius: 25px;
   border: 1px solid white;
   width: 75%;
   position: relative;
@@ -784,18 +839,18 @@ a {
 }
 
 .slider-container:hover {
-  transform: scale(1.6);
+  transform: scale(1.1);
   z-index: 2;
 }
 
 .bi-arrow-left-circle-fill {
   border-radius: 50%;
   position: absolute;
-  font-size: 3.5rem;
+  font-size: 2.8dvw;
   color: white;
   cursor: pointer;
   transition: transform 200ms ease-in-out;
-  left: 35px;
+  left: 0;
   bottom: 0;
 }
 
@@ -810,11 +865,11 @@ a {
 .bi-arrow-right-circle-fill {
   border-radius: 50%;
   position: absolute;
-  font-size: 3.5rem;
+  font-size: 2.8dvw;
   color: white;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-  right: 35px;
+  right: 0;
   bottom: 0;
 }
 
@@ -839,7 +894,6 @@ a {
   color: white;
   text-align: center;
   width: 100%;
-  text-shadow: 0px -11px 5px black;
 }
 
 .card-text-box h4 {
@@ -880,7 +934,7 @@ a {
 }
 
 .info-text-container {
-  width: 40%;
+  width: 50%;
   display: flex;
   text-wrap: balance;
   flex-direction: column;
@@ -889,38 +943,40 @@ a {
   justify-content: center;
 }
 
+.form-container {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.form-container input {
+  width: 85%;
+  font-size: 20px;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.form-container textarea {
+  width: 85%;
+  border: none;
+  resize: vertical;
+  outline: none;
+}
+
 .info-text-container button {
   border-radius: 10px;
   border: none;
-  font-size: 28px;
+  font-size: 2dvw;
   padding-block: 5px;
   width: 220px;
   font-weight: 700;
   background-color: #0a599f;
   cursor: pointer;
   color: white;
-}
-
-.form-container {
-  display: grid;
-  grid-gap: 8px;
-  justify-content: start;
-  justify-items: start;
-}
-
-.form-container input {
-  width: 480px;
-  font-size: 20px;
-  padding: 5px;
-  border: none;
-  border-radius: 10px;
-}
-
-.form-container textarea {
-  width: 100%;
-  height: 300px;
-  border: none;
-  resize: vertical;
 }
 
 /******************************** footer  */
@@ -933,6 +989,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background: linear-gradient(0deg, #282828, #02020299, #282828);
 }
 
@@ -974,6 +1031,7 @@ footer p {
   font-size: 28px;
 }
 footer .copy-icon {
+  text-wrap: nowrap;
   align-items: center;
   width: 15%;
   display: flex;
@@ -1111,12 +1169,11 @@ footer .copy-icon {
   }
 
   .section-skills {
-    overflow-x: hidden;
-    width: 90%;
-    align-items: center;
+    overflow-x: scroll;
+    width: 40%;
     border-radius: 20px;
-    padding: 30px;
     top: -5%;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 
@@ -1126,14 +1183,14 @@ footer .copy-icon {
   }
 
   .cards-skills-container {
-    gap: 30px;
+    width: 600%;
+    gap: 0px;
     flex-wrap: nowrap;
   }
 
   .card-skills-body {
-    width: 260px;
-    height: 385px;
-    border-radius: 25px;
+    width: 100%;
+    border-inline: 1px solid white;
   }
 
   .inside-card-container-1 {
@@ -1145,12 +1202,11 @@ footer .copy-icon {
   }
 
   .section-hobbies {
-    overflow-x: hidden;
-    width: 90%;
-    align-items: center;
+    overflow-x: scroll;
+    width: 40%;
     border-radius: 20px;
-    padding: 30px;
     top: -5%;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 
@@ -1159,21 +1215,29 @@ footer .copy-icon {
     margin-bottom: 15px;
   }
   .cards-hobbies-container {
-    gap: 30px;
+    width: 600%;
+    gap: 0px;
     flex-wrap: nowrap;
+    flex-direction: row;
   }
 
   .card-hobbies-body {
-    width: 260px;
-    height: 385px;
-    border-radius: 25px;
+    width: 100%;
+    border-inline: 1px solid rgb(0, 0, 0);
   }
 
   /******************************** section projects */
-  .section-projects {
-    width: 90vw;
+
+  .projects {
+    width: 90%;
+    align-content: center;
   }
+
   .projects span {
+    width: 80%;
+  }
+
+  .projects div {
     width: 80%;
   }
 
@@ -1211,7 +1275,6 @@ footer .copy-icon {
     color: white;
   }
   .info-text-container input {
-    width: 290px;
   }
   .info-text-container button {
     background-color: #0a599f;
@@ -1357,37 +1420,37 @@ footer .copy-icon {
 
   .card-skills-title {
     font-size: 1.5rem;
-}
+  }
 
-/*---------------- Hobbies */
+  /*---------------- Hobbies */
 
-.section-hobbies {
-  width: 80%;
-  padding: 20px;
-  border-radius: 20px;
-}
+  .section-hobbies {
+    width: 80%;
+    padding: 20px;
+    border-radius: 20px;
+  }
 
-.cards-hobbies-container {
-  flex-direction: column;
-  gap: 20px;
-}
+  .cards-hobbies-container {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-.card-hobbies-body {
-  flex-grow: 0;
-  width: 200px;
-  height: 275px;
-  flex-wrap: nowrap;
-  border-radius: 20px;
-}
+  .card-hobbies-body {
+    flex-grow: 0;
+    width: 200px;
+    height: 275px;
+    flex-wrap: nowrap;
+    border-radius: 20px;
+  }
 
-.card-hobbies-img-top {
-  width: 70%;
-  margin: 0px;
-}
+  .card-hobbies-img-top {
+    width: 70%;
+    margin: 0px;
+  }
 
-.card-hobbies-title {
-  font-size: 1.5rem;
-}
+  .card-hobbies-title {
+    font-size: 1.5rem;
+  }
   /******************************** section-Projects */
   .section-projects {
     width: 85vw;
@@ -1423,53 +1486,50 @@ footer .copy-icon {
     align-items: flex-start;
   }
 
- /******************************** section-Formation */
+  /******************************** section-Formation */
 
- .section-formation {
-  
- }
- .formations-container {
-  width: 80%;
-  flex-direction: column;
-  gap: 25px;
- }
+  .section-formation {
+  }
+  .formations-container {
+    width: 80%;
+    flex-direction: column;
+    gap: 25px;
+  }
 
- .Alura-container {
-  width: 100%;
-  padding: 10px;
- }
- .slider-container {
-  width: 85%;
- }
+  .Alura-container {
+    width: 100%;
+    padding: 10px;
+  }
+  .slider-container {
+    width: 85%;
+  }
 
- .card-text-container {
-  width: 100%;
-}
+  .card-text-container {
+    width: 100%;
+  }
 
- .bi-arrow-left-circle-fill {
-  border-radius: 50%;
-  position: absolute;
-  font-size: 2.5rem;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
+  .bi-arrow-left-circle-fill {
+    border-radius: 50%;
+    position: absolute;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
 
-.bi-arrow-right-circle-fill {
-  border-radius: 50%;
-  position: absolute;
-  font-size: 2.5rem;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
-.card-text-box h4 {
-  font-size: 5vw;
-  margin: 10px;
-}
-.card-text-p{
-  font-size: 3vw;
-}
-
-
+  .bi-arrow-right-circle-fill {
+    border-radius: 50%;
+    position: absolute;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  .card-text-box h4 {
+    font-size: 5vw;
+    margin: 10px;
+  }
+  .card-text-p {
+    font-size: 3vw;
+  }
 }
