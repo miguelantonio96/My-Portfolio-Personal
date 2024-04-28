@@ -5,8 +5,10 @@ html {
 body {
   width: 100dvw;
   box-sizing: border-box;
-  font-family: sans-serif;
   overflow-x: hidden;
+  font-family: "Calistoga", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 a {
@@ -23,7 +25,6 @@ a {
 
 /******************************** Header */
 .header-container {
-  width: 100%;
   height: 150px;
   display: flex;
   align-items: center;
@@ -31,6 +32,7 @@ a {
   position: fixed;
   padding: 0px 20px;
   top: 10px;
+  z-index: 2;
 }
 
 .header-container > a > img {
@@ -47,8 +49,8 @@ a {
 }
 
 .header-container a {
-  height: 60%;
-  animation: logoTranslated 2s ease;
+  height: 70%;
+  animation: logoTranslated 1s ease-in-out;
 }
 
 @keyframes logoTranslated {
@@ -87,13 +89,13 @@ a {
 }
 
 .navbar-container-2 {
+  position: fixed;
   display: flex;
   justify-content: flex-end;
-  right: 0;
-  top: 50px;
-  position: fixed;
-  z-index: 1;
-  animation: navBarTranslated 3s ease-in;
+  right: 20px;
+  top: 65px;
+  z-index: 2;
+  animation: navBarTranslated 1s ease-in-out;
 }
 
 @keyframes navBarTranslated {
@@ -109,12 +111,12 @@ a {
   height: 30px;
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 15px;
+  gap: 50px;
+  padding: 20px;
+  padding-left: 40px;
   padding-right: 0;
-  margin-right: 15px;
   border-radius: 15px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   background-color: #161616;
   box-shadow: 8px 12px 14px -1px;
 }
@@ -129,12 +131,13 @@ a {
 }
 
 .navbar-item img {
-  width: 90px;
-  height: 100px;
+  width: 120px;
+  height: 160px;
   border-radius: 15px;
   background-color: #161616;
-
   box-shadow: 8px 12px 14px -1px;
+  object-fit: cover;
+  object-position: top;
 }
 
 #mi-imagen {
@@ -144,19 +147,18 @@ a {
 /******************************** Main Page */
 
 .main-container {
-  width: 100%;
+  width: 100dvw;
   height: 100dvh;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-between;
   flex-direction: column;
-  color: #faebd7;
-  background-color: #4e121259;
-  z-index: -1;
+  color: #979780;
+  background-color: #000000ad;
 }
 
 .main-items {
-  width: 70%;
+  width: 75%;
   height: 80%;
   display: flex;
   align-items: center;
@@ -171,10 +173,10 @@ a {
 }
 
 .imagen-me {
-  border-radius: 2%;
-  height: 30dvw;
-  background: linear-gradient(#0a030385, #5e494973);
-  box-shadow: 8px 6px 14px 0px #000000, inset 8px 0px 12px 0px #626060;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  height: 35dvw;
   animation: OpacityMyImagen 6s;
 }
 
@@ -200,20 +202,9 @@ a {
   /* animation */
   left: 0px;
   position: relative;
-  animation: moveFromLeft 3s;
+  animation: moveFromLeft 3s ease;
 }
 
-@keyframes scalingName {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
 
 .first-name {
   align-content: center;
@@ -228,11 +219,12 @@ a {
 }
 
 .name-welcome-container {
-  width: 50%;
+  width: 80%;
   display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
   text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .typing-text {
@@ -250,13 +242,13 @@ a {
   font-size: 3dvw;
   margin-top: 15px;
   text-wrap: nowrap;
-  animation: moveFromLeft 3s;
+  animation: moveFromLeft 3s ease;
 }
 
 @keyframes moveFromLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
 
   100% {
@@ -266,8 +258,10 @@ a {
 }
 
 .paragraph-dynamic-container {
-  margin-left: 50px;
-  width: 34%;
+  width: 22%;
+  bottom: 40px;
+  left: 40px;
+  position: absolute;
   overflow: hidden;
 }
 
@@ -288,49 +282,71 @@ a {
 
 .navbar-container {
   display: flex;
-  width: 20%;
-  right: 130px;
-  top: 160px;
+  width: 90%;
+  top: 70px;
   position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+
+
+.circle-container > .circle:nth-child(6){
+  display: none;
 }
 
 .circle-container {
   width: 100%;
-  height: 890px;
+  /* height: 890px; */
   display: flex;
-  position: relative;
-  flex-direction: column;
   justify-content: space-evenly;
   text-wrap: nowrap;
-  animation: scalingName 3s;
+  padding: 15px;
+  border: 1px solid gray;
+  background-color: #161616;
+  border-radius: 25px;
+  height: 40px;
+  align-items: center;
+  animation: translateNavTop 2s ease-in-out
 }
 
+@keyframes translateNavTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+
 .circle-container > .circle {
-  font-size: 2vw;
-  position: relative;
-  height: 75px;
+  font-size: 2rem;
+  
 }
 
 .circle-container > .circle a {
-  color: #faebd7;
+  color: white;
+  padding: 10px 20px;
   font-weight: bold;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in;
 }
 
-.circle-container > .circle:nth-child(odd) {
-  text-align: left;
-}
 .circle-container > .circle:nth-child(odd) > a:hover {
-  font-size: 2.2vw;
-  color: #5555ff;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 25px;
+
 }
 
-.circle-container > .circle:nth-child(even) {
-  text-align: right;
-}
 .circle-container > .circle:nth-child(even) > a:hover {
-  font-size: 2.2vw;
-  color: #5555ff;
+  
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 25px;
 }
 
 /******************************** My portfolio start */
@@ -391,15 +407,16 @@ a {
 /******************************** Section 1 - About me */
 
 .section-about-me {
+  width: 100dvw;
   height: 100dvh;
-  background: linear-gradient(#4e121259, #5555ff);
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(#4e1212, #5555ff);
 }
 
 .section-about-me div {
-  width: 80vw;
+  width: 80%;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -418,51 +435,52 @@ a {
 /******************************** section-skills-and-hobbies */
 
 .skills-hobbies-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
-  padding-block: 60px;
-  align-items: center;
+  position: relative;
+  width: 100dvw;
+  height: 180dvh;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* flex-direction: column; */
+  /* gap: 20px; */
+  /* padding-block: 60px; */
+  /* align-items: center; */
   background: linear-gradient(#5555ff, #4e121259);
 }
 
-.article-SkHb-titles {
-  width: 85%;
+/******************************** section-skills */
+
+.skills-content-container {
+  width: 55%;
+  height: 60%;
   display: flex;
-  justify-content: space-around;
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  gap: 55px;
+  top: 20px;
+  left: 40px;
+  justify-content: flex-start;
 }
 
-.article-SkHb-content {
+.skills-content {
   width: 100%;
-  gap: 5%;
   display: flex;
-  justify-content: center;
+  padding: 40px 0 40px 0;
+  color: #000000;
   flex-wrap: wrap;
 }
 
-/******************************** section-skills */
-.section-skills {
-  width: 40%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 0 40px 0;
-  color: #000000;
-  background-color: white;
-  border-radius: 50px;
-  flex-direction: column;
+.skills-title-container {
 }
 
-.skills-container {
+.skills-title {
   display: flex;
   justify-content: center;
 }
 
-.skills-container > h1 {
+.skills-title > h1 {
   font-weight: bold;
-  font-size: 3.1rem;
+  font-size: 4rem;
   text-align: center;
   color: #000000;
   padding-inline: 25px;
@@ -471,23 +489,26 @@ a {
 /* Card container */
 .cards-skills-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+  gap: 50px;
   color: white;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 1;
 }
 
 .card-skills-body {
+  position: relative;
   flex-grow: 1;
-  /* width: 290px; */
-  height: 400px;
-  padding: 15px;
+  width: 330px;
+  height: 260px;
+  padding: 20px;
   display: flex;
-  flex-wrap: wrap;
   text-align: center;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: #000000;
+  border: 8px solid black;
+  border-radius: 40px;
+  background: linear-gradient(160deg, #1f1f5c, #732121);
   transition: all 300ms ease-in-out;
 }
 
@@ -500,34 +521,66 @@ a {
   height: 350px;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .card-skills-img-top {
   width: 60%;
   margin: 10px;
+  position: absolute;
+  top: -50px;
+  /* filter: drop-shadow(0 0 20rem black); */
+  box-shadow: inset 0px 0px 0px black;
 }
 
 .card-skills-title {
   font-size: 2rem;
+  position: absolute;
+  bottom: 40px;
 }
 
 .card-skills-text {
   bottom: 10px;
   color: white;
+  display: none;
 }
 
 /******************************** Section-Hobbies */
-.section-hobbies {
-  width: 40%;
+
+.hobbies-content-container {
+  position: absolute;
+  width: 45%;
+  height: 60%;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 60px;
+  gap: 20px;
+  padding: 30px;
   align-items: center;
+  border-radius: 50px;
+  bottom: 20px;
+  right: 40px;
+  background-color: #1f2020;
+  box-shadow: 0px 20px 20px 2px black;
+}
+
+.hobbies-content {
+  overflow: hidden;
+  width: 80%;
+  display: flex;
   justify-content: center;
   padding: 40px 0 40px 0;
   color: #000000;
-  background-color: black;
-  border-radius: 50px;
   flex-direction: column;
+}
+
+
+.hobbies-content-robot {
+  width: 62%;
+  position: absolute;
+  left: -44.5%;
+  top: 10%;
 }
 
 .hobbies-container {
@@ -540,64 +593,67 @@ a {
   font-size: 3.1rem;
   text-align: center;
   color: white;
-  padding-inline: 25px;
+  padding: 20px;
 }
 
 /* Card container */
-.cards-hobbies-container {
+/* .cards-hobbies-container {
   width: 100%;
   display: flex;
   gap: 40px;
   color: #000000;
   flex-wrap: wrap;
   flex-direction: column;
-}
+} */
 
 .card-hobbies-body {
-  flex-grow: 1;
-  /* width: 290px; */
-  height: 400px;
-  padding: 15px;
   display: flex;
-  flex-wrap: wrap;
   text-align: center;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: #ffffff;
-  transition: all 300ms ease-in-out;
+  padding: 15px;
+  color: #ffffff;
+  border-top: 1px solid rgb(104 104 104);
 }
 
-.card-hobbies-body:hover {
+/* .card-hobbies-body:hover {
   transform: scale(1.05);
   box-shadow: 0px 0px 12px 1px #ffe4c491;
-}
+} */
 
 .card-hobbies-img-top {
-  width: 75%;
+  height: 150px;
   margin: 10px;
+  padding: 7px;
+  border-radius: 50%;
+  object-fit: contain;
+  object-position: center;
+  background-color: #004a77;
 }
 
 .card-hobbies-text {
-  color: #000000;
 }
 
 .inside-hobbies-card {
-  height: 350px;
+  color: #ffffff;
+  gap: 10px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
 }
 
 .card-hobbies-title {
+  color: #fe8d59;
   font-size: 2rem;
   font-weight: 800;
+}
+
+.card-hobbies-text-p {
 }
 
 /******************************** Section - Projects */
 
 .section-projects-container {
-  margin-block: 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -620,6 +676,7 @@ a {
   font-size: 4rem;
   color: #2b2b82;
   text-align: center;
+  margin-top: 80px;
 }
 
 .projects {
@@ -632,7 +689,7 @@ a {
 
 .projects .project {
   position: relative;
-  width: 50%;
+  width: 60%;
   padding: 15px;
   display: flex;
   flex-wrap: wrap;
@@ -655,7 +712,7 @@ a {
 .project-title-container {
   position: absolute;
   z-index: 1;
-  position: absolute;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -720,7 +777,7 @@ a {
   height: 45px;
   width: 150px;
   padding: 10px 20px;
-  font-size: 0.8dvw;
+  font-size: 1rem;
   font-weight: bold;
   border: none;
   color: #2a7ae4;
@@ -737,7 +794,7 @@ a {
   height: 45px;
   width: 150px;
   padding: 10px 20px;
-  font-size: 0.8dvw;
+  font-size: 1rem;
   font-weight: bold;
   border: none;
   color: white;
@@ -1233,12 +1290,19 @@ footer .copy-icon {
     align-content: center;
   }
 
-  .projects span {
-    width: 80%;
+  .projects .project {
+    width: 70%;
   }
 
-  .projects div {
-    width: 80%;
+  .projects span {
+  }
+
+  .project-title-container {
+    top: 50%;
+    left: 50%;
+  }
+
+  .projects-btn-bg {
   }
 
   /******************************** section formation */
