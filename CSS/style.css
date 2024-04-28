@@ -205,7 +205,6 @@ a {
   animation: moveFromLeft 3s ease;
 }
 
-
 .first-name {
   align-content: center;
   top: 30%;
@@ -289,9 +288,7 @@ a {
   left: 50%;
 }
 
-
-
-.circle-container > .circle:nth-child(6){
+.circle-container > .circle:nth-child(6) {
   display: none;
 }
 
@@ -307,7 +304,7 @@ a {
   border-radius: 25px;
   height: 40px;
   align-items: center;
-  animation: translateNavTop 2s ease-in-out
+  animation: translateNavTop 2s ease-in-out;
 }
 
 @keyframes translateNavTop {
@@ -322,10 +319,8 @@ a {
   }
 }
 
-
 .circle-container > .circle {
   font-size: 2rem;
-  
 }
 
 .circle-container > .circle a {
@@ -339,11 +334,9 @@ a {
   background-color: rgba(255, 255, 255, 0.3);
   padding: 10px 20px;
   border-radius: 25px;
-
 }
 
 .circle-container > .circle:nth-child(even) > a:hover {
-  
   background-color: rgba(255, 255, 255, 0.3);
   padding: 10px 20px;
   border-radius: 25px;
@@ -574,7 +567,6 @@ a {
   color: #000000;
   flex-direction: column;
 }
-
 
 .hobbies-content-robot {
   width: 62%;
@@ -1099,7 +1091,7 @@ footer .copy-icon {
 
 /******************************** Responsive - Devices  */
 
-@media screen and (min-width: 681px) and (max-width: 1240px) {
+@media screen and (min-width: 681px) and (max-width: 1395px) {
   .header-items {
     font-size: 13px;
   }
@@ -1123,7 +1115,8 @@ footer .copy-icon {
 
   .main-items {
     flex-direction: column;
-    width: 95%;
+    width: 90%;
+    height: 50%;
   }
 
   .imagen-me {
@@ -1148,6 +1141,19 @@ footer .copy-icon {
     font-size: 5dvw;
   }
 
+  .paragraph-dynamic-container {
+    bottom: 200px;
+    left: 40px;
+  }
+
+  .paragraph-dynamic {
+    font-size: 2dvw;
+  }
+  .my-portfolio-start {
+    width: 80%;
+    align-items: flex-start;
+  }
+
   .btn-open-menu,
   .btn-close-menu {
     display: block;
@@ -1170,6 +1176,10 @@ footer .copy-icon {
     padding: 2rem;
   }
 
+  .navbar-container-2 {
+   display: none; 
+  }
+
   .navbar-container-visible {
     opacity: 1;
     visibility: visible;
@@ -1179,6 +1189,8 @@ footer .copy-icon {
     height: 20px;
     font-size: 1rem;
   }
+
+  
 
   .navbar-item-container a:hover {
     color: #828387;
@@ -1220,67 +1232,38 @@ footer .copy-icon {
     font-size: 2.8dvw;
   }
   /******************************** section-skills-and-hobbies */
-  .container-skills-hobbies {
-    flex-wrap: wrap;
-    justify-content: space-around;
+
+  .skills-hobbies-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: auto;
+    gap: 50px;
   }
 
-  .section-skills {
-    overflow-x: scroll;
-    width: 40%;
-    border-radius: 20px;
-    top: -5%;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+  .skills-content-container {
+    position: relative;
+    width: 94%;
+    height: auto;
+    left: 30px;
   }
 
-  .skills-container {
-    place-self: start;
-    margin-bottom: 15px;
+  .skills-content {
+    justify-content: center;
   }
 
-  .cards-skills-container {
-    width: 600%;
-    gap: 0px;
-    flex-wrap: nowrap;
+  .hobbies-content-container {
+    position: relative;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    transform: translate(40%, 0%);
+    width: 65%;
   }
 
-  .card-skills-body {
-    width: 100%;
-    border-inline: 1px solid white;
-  }
-
-  .inside-card-container-1 {
-    align-items: flex-start;
-    height: 70%;
-  }
-  .card-skills-title {
-    font-size: 1.4rem;
-  }
-
-  .section-hobbies {
-    overflow-x: scroll;
-    width: 40%;
-    border-radius: 20px;
-    top: -5%;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .hobbies-container {
-    place-self: start;
-    margin-bottom: 15px;
-  }
-  .cards-hobbies-container {
-    width: 600%;
-    gap: 0px;
-    flex-wrap: nowrap;
-    flex-direction: row;
-  }
-
-  .card-hobbies-body {
-    width: 100%;
-    border-inline: 1px solid rgb(0, 0, 0);
+  .hobbies-content-robot {
+    width: 50%;
+    left: -36%;
   }
 
   /******************************** section projects */
