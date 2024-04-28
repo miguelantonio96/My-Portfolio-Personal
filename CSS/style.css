@@ -808,7 +808,6 @@ a {
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-block: 20px;
   color: #000000;
 }
 
@@ -1177,7 +1176,7 @@ footer .copy-icon {
   }
 
   .navbar-container-2 {
-   display: none; 
+    display: none;
   }
 
   .navbar-container-visible {
@@ -1189,8 +1188,6 @@ footer .copy-icon {
     height: 20px;
     font-size: 1rem;
   }
-
-  
 
   .navbar-item-container a:hover {
     color: #828387;
@@ -1354,51 +1351,64 @@ footer .copy-icon {
   }
 
   .main-items {
-    width: 85%;
+    width: 100%;
+    height: 60%;
   }
 
   .imagen-me {
     height: 75dvw;
   }
 
-  .full-name-container {
-    height: 90px;
+  .name-welcome-container {
+    width: 90%;
   }
 
-  .firt-name {
-    height: 20%;
+  .typing-text {
+    font-size: 8dvw;
   }
-  .last-name {
-    height: 20%;
+
+  .full-name-container {
+    font-size: 8dvw;
+  }
+
+  .paragraph-dynamic-container {
+    width: 35%;
+  }
+  .paragraph-dynamic {
+    font-size: 2.5dvw;
   }
 
   .letter-developer {
-    font-size: 2dvw;
+    font-size: 5dvw;
   }
 
-  .btn-open-menu,
-  .btn-close-menu {
+  .btn-open-menu {
     display: block;
+    font-size: 4rem;
   }
 
-  /* .navbar-container {
+  .navbar-container-2 {
     display: none;
-  } */
+  }
 
   .navbar-container {
+    width: 45%;
     opacity: 0;
     visibility: hidden;
     display: flex;
     flex-direction: column;
     align-items: end;
-    right: 0;
-    top: 0;
-    position: absolute;
     z-index: 1;
     background: #282828d4;
-    border-bottom-left-radius: 30px;
+    border-bottom-left-radius: 10px;
     box-shadow: 0 0 0 100vmax #3e3c3c6e;
-    padding: 2rem;
+    padding: 10px;
+    position: absolute;
+    transform: translate(0%, 0%);
+    right: 0;
+    top: 0;
+    left: auto;
+    background-color: #161616;
   }
 
   .navbar-container-visible {
@@ -1407,21 +1417,32 @@ footer .copy-icon {
   }
 
   .circle-container {
-    height: 80dvh;
+    height: 65dvh;
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+    align-items: flex-end;
+    border-radius: 10px;
+  }
+
+  .my-portfolio-start {
+    position: relative;
   }
 
   .name-portfolio {
-    font-size: 1.1rem;
+    font-size: 2rem;
+    position: absolute;
+    left: 20px;
   }
 
-  .my-portfolio-start img {
-    height: 30px;
-    width: 30px;
+  .arrow-down-circle {
+    position: absolute;
+    bottom: 20px;
   }
 
   /******************************** section-About-me */
   .section-about-me {
-    height: 70dvh;
+    height: 100dvh;
   }
 
   .section-about-me div {
@@ -1438,79 +1459,53 @@ footer .copy-icon {
   }
 
   /******************************** section-skills-and-hobbies */
-  .container-skills-hobbies {
-  }
 
-  .section-skills {
-    width: 80%;
-    padding: 20px;
-    border-radius: 20px;
-  }
-
-  .cards-skills-container {
+  .skills-hobbies-container {
+    height: auto;
+    display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+    padding-block: 60px;
   }
 
-  .card-skills-body {
-    flex-grow: 0;
-    width: 200px;
-    height: 275px;
-    flex-wrap: nowrap;
-    border-radius: 20px;
-  }
+  /*---------------- Skills */
 
-  .card-skills-img-top {
-    width: 70%;
-    margin: 0px;
-  }
-
-  .card-skills-title {
-    font-size: 1.5rem;
+  .skills-content-container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    left: 0;
   }
 
   /*---------------- Hobbies */
 
-  .section-hobbies {
+  .hobbies-content-container {
+    position: relative;
     width: 80%;
-    padding: 20px;
-    border-radius: 20px;
+    height: auto;
+    margin: 0 auto;
+    right: 0;
   }
 
-  .cards-hobbies-container {
-    flex-direction: column;
-    gap: 20px;
+  .hobbies-content-robot {
+    display: none;
   }
 
-  .card-hobbies-body {
-    flex-grow: 0;
-    width: 200px;
-    height: 275px;
-    flex-wrap: nowrap;
-    border-radius: 20px;
-  }
-
-  .card-hobbies-img-top {
-    width: 70%;
-    margin: 0px;
-  }
-
-  .card-hobbies-title {
-    font-size: 1.5rem;
-  }
   /******************************** section-Projects */
   .section-projects {
-    width: 85vw;
+    padding-block: 60px;
   }
 
   .projects {
-    width: 100%;
+    width: 90%;
     align-content: center;
   }
 
-  .projects div {
-    padding: 15px;
+  .projects .project {
+    width: 90%;
+    margin: 0 auto;
   }
+
   .video-item {
     width: 100%;
   }
@@ -1536,9 +1531,11 @@ footer .copy-icon {
   /******************************** section-Formation */
 
   .section-formation {
+    padding-block: 60px;
+    gap: 50px;
   }
   .formations-container {
-    width: 80%;
+    width: 90%;
     flex-direction: column;
     gap: 25px;
   }
