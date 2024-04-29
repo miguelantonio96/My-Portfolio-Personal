@@ -222,5 +222,5 @@ btnNavOpenClosed.addEventListener("click", () => {
   navBarContainer.classList.toggle("navbar-container-visible");
   btnNavOpenClosed.children[0].classList.toggle("bi-list");
   btnNavOpenClosed.children[0].classList.toggle("bi-x-square");
-  btnNavOpenClosed.classList.toggle("btn-dblclicked");
+  btnNavOpenClosed.classList.toggle("bi-x-square-clicked");
 });
