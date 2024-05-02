@@ -197,7 +197,7 @@ window.addEventListener("scroll", () => {
   let scrollPosition = window.scrollY;
   let screenWidth = window.screenX;
   console.log(screenWidth);
-  if (scrollPosition > 1200 && screenWidth < 1307) {
+  if (scrollPosition > 1200) {
     navBarItemImagen.style.display = "flex";
     navBarContainer.classList.remove("navbar-container");
     navBarContainer.classList.add("navbar-container-2");
