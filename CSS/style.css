@@ -427,24 +427,18 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 55px;
+  gap: 60px;
   align-items: center;
+  margin-bottom: 100px;
 }
 
-.skills-content {
-  width: 100%;
-  display: flex;
-  padding: 40px 0 40px 0;
-  color: #000000;
-  flex-wrap: wrap;
-}
 
 .skills-title-container > h1 {
   font-weight: bold;
   font-size: 4rem;
   text-align: center;
-  color: #000000;
-  padding-inline: 25px;
+  color: #ffffff;
+  padding: 35px;
 }
 
 /* Card container */
@@ -455,23 +449,24 @@ a {
   color: white;
   z-index: 1;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .card-skills-body {
   position: relative;
-  flex-grow: 1;
-  width: 330px;
-  height: 260px;
+  /* flex-grow: 1; */
+  width: 280px;
+  /* height: 260px; */
   padding: 20px;
   display: flex;
   text-align: center;
-  flex-direction: column;
   align-items: center;
   border: 8px solid black;
-  border-radius: 40px;
+  border-radius: 30px;
   background: linear-gradient(160deg, #1f1f5c, #732121);
   transition: all 300ms ease-in-out;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card-skills-body:hover {
@@ -480,14 +475,14 @@ a {
 }
 
 .inside-skills-card {
-  height: 350px;
+  height: 280px;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
 }
 
 .card-skills-img-top {
-  width: 60%;
+  width: 70%;
   margin: 10px;
   position: absolute;
   top: -50px;
@@ -521,7 +516,7 @@ a {
   align-items: center;
   border-radius: 50px;
   bottom: 20px;
-  right: 40px;
+  /* right: 40px; */
   background-color: #1f2020;
   box-shadow: 0px 20px 20px 2px black;
 }
@@ -548,7 +543,7 @@ a {
   justify-content: center;
 }
 
-.hobbies-container > h1 {
+.hobbies-title-container > h1 {
   font-weight: bold;
   font-size: 3.1rem;
   text-align: center;
@@ -657,11 +652,14 @@ a {
 }
 
 .project-title-container {
+  display: grid;
+  gap: 10px;
   position: absolute;
   z-index: 1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  justify-items: center;
 }
 
 .video-item {
@@ -722,9 +720,9 @@ a {
 
 .btn-reposit {
   height: 45px;
-  width: 150px;
-  padding: 10px 20px;
-  font-size: 1rem;
+  width: 190px;
+  padding: 10px;
+  font-size: 1.3rem;
   font-weight: bold;
   border: none;
   color: #2a7ae4;
@@ -739,9 +737,9 @@ a {
 
 .btn-demo {
   height: 45px;
-  width: 150px;
-  padding: 10px 20px;
-  font-size: 1rem;
+  width: 190px;
+  padding: 10px;
+  font-size: 1.3rem;
   font-weight: bold;
   border: none;
   color: white;
@@ -952,11 +950,12 @@ a {
   gap: 8px;
   align-items: flex-start;
   flex-direction: column;
+  
 }
 
 .form-container input {
   width: 85%;
-  font-size: 20px;
+  font-size: 1.3rem;
   padding: 10px;
   border: none;
   border-radius: 10px;
@@ -965,11 +964,12 @@ a {
 
 .form-container textarea {
   width: 85%;
+  font-size: 1.3rem;
   padding: 10px;
-  border-radius: 10px;
   border: none;
-  resize: vertical;
+  border-radius: 10px;
   outline: none;
+  resize: none;
 }
 
 .info-text-container button {
@@ -979,9 +979,20 @@ a {
   padding: 10px;
   width: 280px;
   font-weight: 700;
-  background-color: #0a599f;
+  background-color: #5555ff;
   cursor: pointer;
   color: white;
+}
+
+
+.info-text-container button:hover{
+  background-color: #2e2e98;
+  
+}
+
+.info-text-container button:active{
+  background-color: #0202f8;
+  
 }
 
 /******************************** footer  */
@@ -1046,7 +1057,7 @@ footer .copy-icon {
 
 /******************************** Responsive - Devices  */
 
-@media screen and (min-width: 681px) and (max-width: 1395px) {
+@media screen and (min-width: 681px) and (max-width: 1295px) {
   .header-container {
     top: 0px;
   }
@@ -1136,7 +1147,6 @@ footer .copy-icon {
     justify-content: center;
     border-radius: 0 0 0 10px;
     border: 1px solid gray;
-
     box-shadow: 0 0 0 100vmax #3e3c3c6e;
     padding: 10px;
     z-index: 2;
@@ -1148,36 +1158,41 @@ footer .copy-icon {
   }
 
   .navbar-container {
-    width: 80%;
-    height: 65dvh;
-    position: fixed;
-    flex-direction: column;
-    align-items: end;
-    z-index: 1;
-    border-radius: 10px;
-    box-shadow: 0 0 0 100vmax #3e3c3c6e;
-    padding: 10px;
-    transform: translate(0%, 0%);
-    right: 0;
-    top: 0;
-    left: auto;
-    justify-content: center;
+    
     visibility: hidden;
     opacity: 0;
   }
 
   .navbar-container-visible {
+
+    width: 75%;
+    height: 70%;
+    position: fixed;
+    flex-direction: column;
+    align-items: end;
+    z-index: 1;
+    border-radius: 0 0 0 15px;
+    box-shadow: 0 0 0 100vmax #3e3c3c6e;
+    padding: 0;
+    transform: translate(0%, 0%);
+    right: 0;
+    top: 0;
+    left: auto;
+    justify-content: center;
+    border-top: none;
+    border-right: none;
+
     opacity: 1;
     visibility: visible;
-    animation: navBarSideRight 1s ease-in;
+    animation: navBarTopDown 1s ease-in;
   }
 
-  @keyframes navBarSideRight {
+  @keyframes navBarTopDown {
     0% {
-      transform: translate(100%);
+      transform: translateY(-100%);
     }
     100% {
-      transform: translate(right, 0%);
+      transform: translateY(0%);
     }
   }
 
@@ -1238,6 +1253,9 @@ footer .copy-icon {
     gap: 50px;
   }
 
+/******************************** Skills */
+
+
   .skills-content-container {
     width: 94%;
     height: auto;
@@ -1248,18 +1266,28 @@ footer .copy-icon {
     justify-content: center;
   }
 
+/******************************** Hobbies */
+
+
   .hobbies-content-container {
     position: relative;
     height: auto;
     bottom: 0;
     right: 0;
-    transform: translate(40%, 0%);
-    width: 60%;
+    transform: translate(0%, 0%);
+    width: 80%;
   }
 
   .hobbies-content-robot {
-    width: 50%;
-    left: -36%;
+    display: none;
+  }
+
+  .card-hobbies-body {
+    flex-direction: column;
+  }
+
+  .inside-hobbies-card {
+    align-items: center;
   }
 
   /******************************** section projects */
@@ -1424,39 +1452,42 @@ footer .copy-icon {
   }
 
   .navbar-container {
-    width: 100%;
-
-    position: fixed;
-    flex-direction: column;
-    align-items: end;
-    z-index: 2;
-    border-radius: 0;
-    box-shadow: 0 0 0 100vmax #3e3c3c6e;
-    padding: 10px;
-    transform: translate(0%, 0%);
-    top: 0;
-    left: auto;
-    justify-content: center;
+    
     visibility: hidden;
     opacity: 0;
   }
 
   .navbar-container-visible {
+
+    width: 100%;
     height: 70%;
-    align-items: center;
+    position: fixed;
     display: flex;
+    align-items: end;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     padding: 0;
+    z-index: 2;
+    top: 0;
+    left: auto;
     opacity: 1;
     visibility: visible;
-    animation: navBarSideRight 1s ease-in;
+
+    transform: translate(0%, 0%);
+    box-shadow: 0 0 0 100vmax #3e3c3c6e;
+    border: none;
+    border-bottom: 1px solid gray;
+    border-radius: 0 0 10px 10px;
+    animation: navBarTopDown 1s ease-in;
   }
 
-  @keyframes navBarSideRight {
+  @keyframes navBarTopDown {
     0% {
-      transform: translate(100%);
+      transform: translateY(-100%);
     }
     100% {
-      transform: translate(right, 0%);
+      transform: translateY(0%);
     }
   }
 
@@ -1464,7 +1495,7 @@ footer .copy-icon {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 0px;
+    padding: 0;
     border-radius: 10px;
     align-items: center;
     justify-content: center;
@@ -1511,16 +1542,17 @@ footer .copy-icon {
   }
 
   .section-about-me div {
-    width: 85vw;
+    gap: 30px;
     align-items: center;
   }
 
   .section-about-me h1 {
-    font-size: 4dvw;
+    font-size: 2rem;
+    padding: 20px;
   }
 
   .section-about-me p {
-    font-size: 2.8dvw;
+    font-size: 1rem;
   }
 
   /******************************** section-skills-and-hobbies */
@@ -1537,18 +1569,27 @@ footer .copy-icon {
 
   .skills-content-container {
     position: relative;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     left: 0;
   }
 
   .card-skills-body {
-    width: 250px;
+    width: 80%;
   }
 
   .skills-title-container > h1 {
     font-size: 2rem;
   }
+
+  .card-skills-img-top {
+    width: 70%;
+  }
+
+  .card-skills-title {
+    font-size: 1.5rem;
+   
+}
 
   /*---------------- Hobbies */
 
@@ -1599,6 +1640,7 @@ footer .copy-icon {
 
 .section-projects h1 {
 font-size: 2rem;
+margin-top: 0;
 }
 
   .projects {
@@ -1615,7 +1657,7 @@ font-size: 2rem;
     width: 100%;
   }
   .projects span {
-    width: 80%;
+    width: 100%;
     align-content: center;
     flex-direction: column;
   }
