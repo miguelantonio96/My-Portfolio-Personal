@@ -398,6 +398,7 @@ a {
   gap: 50px;
   text-align: left;
   color: white;
+  align-items: center;
 }
 
 .section-about-me h1 {
@@ -432,7 +433,6 @@ a {
   margin-bottom: 100px;
 }
 
-
 .skills-title-container > h1 {
   font-weight: bold;
   font-size: 4rem;
@@ -442,43 +442,72 @@ a {
 }
 
 /* Card container */
+
 .cards-skills-container {
-  width: 90%;
+  width: 100%;
   display: flex;
-  gap: 50px;
-  color: white;
-  z-index: 1;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  justify-content: space-around;
+  row-gap: 50px;
 }
 
 .card-skills-body {
   position: relative;
-  /* flex-grow: 1; */
-  width: 280px;
-  /* height: 260px; */
-  padding: 20px;
+  width: 430px;
+  height: 380px;
+  /* padding: 20px; */
   display: flex;
   text-align: center;
   align-items: center;
   border: 8px solid black;
   border-radius: 30px;
   background: linear-gradient(160deg, #1f1f5c, #732121);
-  transition: all 300ms ease-in-out;
-  flex-wrap: wrap;
-  justify-content: center;
+  transition: all 600ms ease-in-out;
 }
 
 .card-skills-body:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
   box-shadow: 0px 0px 13px 2px #363535;
 }
 
-.inside-skills-card {
-  height: 280px;
+.card-skills-body div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  backface-visibility: hidden;
+}
+
+.inside-skills-card-front {
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.inside-skills-card-back {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+  text-wrap: pretty;
+  transition: transform 0.6s;
+}
+
+.card-skills-body:hover .inside-skills-card-front {
+  transform: rotateY(-180deg);
+}
+
+.card-skills-body:hover .inside-skills-card-back {
+  transform: rotateY(0deg);
 }
 
 .card-skills-img-top {
@@ -493,12 +522,12 @@ a {
   font-size: 2rem;
   position: absolute;
   bottom: 40px;
+  color: white;
 }
 
 .card-skills-text {
-  bottom: 10px;
+  font-size: 1rem;
   color: white;
-  display: none;
 }
 
 /******************************** Section-Hobbies */
@@ -950,7 +979,6 @@ a {
   gap: 8px;
   align-items: flex-start;
   flex-direction: column;
-  
 }
 
 .form-container input {
@@ -984,15 +1012,12 @@ a {
   color: white;
 }
 
-
-.info-text-container button:hover{
+.info-text-container button:hover {
   background-color: #2e2e98;
-  
 }
 
-.info-text-container button:active{
+.info-text-container button:active {
   background-color: #0202f8;
-  
 }
 
 /******************************** footer  */
@@ -1056,8 +1081,8 @@ footer .copy-icon {
 }
 
 /******************************** Responsive - Devices  */
-
-@media screen and (min-width: 681px) and (max-width: 1295px) {
+/* Style for Tablet */
+@media screen and (min-width: 769px) and (max-width: 1424px) {
   .header-container {
     top: 0px;
   }
@@ -1069,7 +1094,7 @@ footer .copy-icon {
     height: 60%;
   }
 
-  .name-porfolio {
+  .name-portfolio {
     display: none;
   }
 
@@ -1158,13 +1183,11 @@ footer .copy-icon {
   }
 
   .navbar-container {
-    
     visibility: hidden;
     opacity: 0;
   }
 
   .navbar-container-visible {
-
     width: 75%;
     height: 70%;
     position: fixed;
@@ -1253,8 +1276,7 @@ footer .copy-icon {
     gap: 50px;
   }
 
-/******************************** Skills */
-
+  /******************************** Skills */
 
   .skills-content-container {
     width: 94%;
@@ -1266,8 +1288,7 @@ footer .copy-icon {
     justify-content: center;
   }
 
-/******************************** Hobbies */
-
+  /******************************** Hobbies */
 
   .hobbies-content-container {
     position: relative;
@@ -1352,8 +1373,300 @@ footer .copy-icon {
     color: white;
   }
 }
+/* Style for Tablet and mobile devices landscape */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .header-container {
+    top: 0px;
+  }
+  .header-items {
+    font-size: 13px;
+  }
 
-@media screen and (max-width: 680px) {
+  .header-container a {
+    height: 60%;
+  }
+
+  .name-portfolio {
+    display: none;
+  }
+
+  .header-menu-right {
+    gap: 10px;
+  }
+
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-items {
+    flex-direction: column;
+    width: 90%;
+    height: 50%;
+  }
+
+  .imagen-me {
+    height: 60dvw;
+  }
+  .name-welcome-container {
+    width: 100%;
+    align-items: center;
+  }
+
+  .typing-text {
+    font-size: 7dvw;
+  }
+
+  .full-name-container {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 6dvw;
+  }
+  .letter-developer {
+    font-size: 5dvw;
+  }
+
+  .paragraph-dynamic-container {
+    bottom: 200px;
+    left: 40px;
+  }
+
+  .paragraph-dynamic {
+    font-size: 2dvw;
+  }
+  .my-portfolio-start {
+    width: 80%;
+    align-items: flex-start;
+  }
+
+  .btn-open-menu {
+    position: fixed;
+    font-size: 4rem;
+    display: block;
+  }
+
+  .bi-x-square-clicked {
+    transform: translate(120%);
+    border: none;
+    font-size: 3rem;
+    background-color: transparent;
+    animation: xMenuTranslated 0.25s ease-in-out 0.8s forwards;
+  }
+
+  .navbar-container-2 {
+    width: 80%;
+    height: 60%;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 0 0 10px;
+    border: 1px solid gray;
+    box-shadow: 0 0 0 100vmax #3e3c3c6e;
+    padding: 10px;
+    z-index: 2;
+    position: fixed;
+    transform: translate(0%, 0%);
+    right: 0;
+    top: 0;
+    left: auto;
+  }
+
+  .navbar-container {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .navbar-container-visible {
+    width: 75%;
+    height: 70%;
+    position: fixed;
+    flex-direction: column;
+    align-items: end;
+    z-index: 1;
+    border-radius: 0 0 0 15px;
+    box-shadow: 0 0 0 100vmax #3e3c3c6e;
+    padding: 0;
+    transform: translate(0%, 0%);
+    right: 0;
+    top: 0;
+    left: auto;
+    justify-content: center;
+    border-top: none;
+    border-right: none;
+
+    opacity: 1;
+    visibility: visible;
+    animation: navBarTopDown 1s ease-in;
+  }
+
+  @keyframes navBarTopDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  .navbar-item-container {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-wrap: nowrap;
+  }
+
+  .circle-container {
+    height: 100%;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .circle-container > .circle {
+    width: 90%;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.2rem;
+    border-block-end: 1px solid gray;
+  }
+
+  .navbar-item img {
+    box-shadow: 0px 0px 19px 2px;
+  }
+
+  .arrow-down-circle {
+    font-size: 4rem;
+  }
+
+  /******************************** about me */
+
+  .section-about-me div {
+    width: 90vw;
+  }
+
+  .section-about-me h1 {
+    font-size: 4.1dvw;
+  }
+
+  .section-about-me p {
+    font-size: 2.8dvw;
+  }
+  /******************************** section-skills-and-hobbies */
+
+  .skills-hobbies-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: auto;
+    gap: 50px;
+  }
+
+  /******************************** Skills */
+
+  .skills-content-container {
+    width: 94%;
+    height: auto;
+    left: 30px;
+  }
+
+  .skills-content {
+    justify-content: center;
+  }
+
+  /******************************** Hobbies */
+
+  .hobbies-content-container {
+    position: relative;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    transform: translate(0%, 0%);
+    width: 80%;
+  }
+
+  .hobbies-content-robot {
+    display: none;
+  }
+
+  .card-hobbies-body {
+    flex-direction: column;
+  }
+
+  .inside-hobbies-card {
+    align-items: center;
+  }
+
+  /******************************** section projects */
+
+  .projects {
+    width: 90%;
+    align-content: center;
+  }
+
+  .projects .project {
+    width: 70%;
+  }
+
+  .projects span {
+  }
+
+  .project-title-container {
+    top: 50%;
+    left: 50%;
+  }
+
+  .projects-btn-bg {
+  }
+
+  /******************************** section formation */
+  .formations-container {
+    width: 90%;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .Alura-container {
+    width: 60%;
+  }
+
+  .slider-container {
+    width: 90%;
+  }
+
+  .video-item {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  /******************************** section contact me */
+  .section-contact-me {
+    height: auto;
+  }
+
+  .contact-me-container {
+    width: 90%;
+  }
+
+  .info-text-container {
+    color: white;
+  }
+  .info-text-container input {
+  }
+  .info-text-container button {
+    background-color: #0a599f;
+    cursor: pointer;
+    color: white;
+  }
+}
+/* Style for Mobile devices */
+@media screen and (max-width: 480px) {
   .header-container {
     top: 0px;
     height: 80px;
@@ -1368,7 +1681,7 @@ footer .copy-icon {
     font-size: 12px;
   }
 
-  .name-porfolio {
+  .name-portfolio {
     display: none;
   }
 
@@ -1452,13 +1765,11 @@ footer .copy-icon {
   }
 
   .navbar-container {
-    
     visibility: hidden;
     opacity: 0;
   }
 
   .navbar-container-visible {
-
     width: 100%;
     height: 70%;
     position: fixed;
@@ -1588,8 +1899,7 @@ footer .copy-icon {
 
   .card-skills-title {
     font-size: 1.5rem;
-   
-}
+  }
 
   /*---------------- Hobbies */
 
@@ -1638,10 +1948,10 @@ footer .copy-icon {
     padding-block: 60px;
   }
 
-.section-projects h1 {
-font-size: 2rem;
-margin-top: 0;
-}
+  .section-projects h1 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
 
   .projects {
     width: 90%;
@@ -1676,7 +1986,7 @@ margin-top: 0;
 
   .formation-academy-container > h3 {
     font-size: 2rem;
-    }
+  }
 
   .formations-container {
     width: 90%;
@@ -1759,8 +2069,8 @@ margin-top: 0;
     font-size: 1rem;
   }
 
-  .form-container input:focus{
-background-color: white;
+  .form-container input:focus {
+    background-color: white;
   }
 
   .form-container textarea {
