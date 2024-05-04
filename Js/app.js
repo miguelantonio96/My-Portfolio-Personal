@@ -130,60 +130,144 @@
 //   return newCard.join('');
 // }
 
-// let cardTextContainer = document.querySelectorAll(".Alura-container");
 
-// cardTextContainer.forEach(() => {
-//   const btnLeft = document.querySelector("#arrow-left");
-//   const btnRight = document.querySelector("#arrow-right");
-//   const sliders = document.querySelectorAll("#slider");
+const btnLeft1 = document.querySelector("#arrow-left-1");
+const btnRight1 = document.querySelector("#arrow-right-1");
+const slider1 = document.querySelectorAll("#slider-1");
 
-//   sliders.forEach((slider, index) => {
-//     let sliderSection = document.querySelectorAll(`.card-imagen-${index + 1}`);
+slider1.forEach((slider) => {
+  let sliderSection = document.querySelectorAll(".card-imagen-1");
+  let sliderSectionLast = sliderSection[sliderSection.length - 1];
+  slider.insertAdjacentElement("afterbegin", sliderSectionLast);
 
-//     console.log({ sliderSection });
-//     let sliderSectionLast = sliderSection[sliderSection.length - 1];
-//     slider.insertAdjacentElement("afterbegin", sliderSectionLast);
+  function next() {
+    let sliderSectionFirst = document.querySelectorAll(".card-imagen-1")[0];
+    slider.style.marginLeft = "-200%";
+    slider.style.transition = "all 0.5s";
+    setTimeout(() => {
+      slider.style.transition = "none";
+      slider.insertAdjacentElement("beforeend", sliderSectionFirst);
+      slider.style.marginLeft = "-100%";
+    }, 500);
+  }
 
-//     function next() {
-//       let sliderSectionFirst = document.querySelectorAll(
-//         `.card-imagen-${index + 1}`
-//       )[0];
-//       slider.style.marginLeft = "-200%";
-//       slider.style.transition = "all 0.5s";
-//       setTimeout(() => {
-//         slider.style.transition = "none";
-//         slider.insertAdjacentElement("beforeend", sliderSectionFirst);
-//         slider.style.marginLeft = "-100%";
-//       }, 500);
-//     }
+  function previous() {
+    let sliderSection = document.querySelectorAll(".card-imagen-1");
+    let sliderSectionLast = sliderSection[sliderSection.length - 1];
+    slider.style.marginLeft = "0";
+    slider.style.transition = "all 0.5s";
+    setTimeout(() => {
+      slider.style.transition = "none";
+      slider.insertAdjacentElement("afterbegin", sliderSectionLast);
+      slider.style.marginLeft = "-100%";
+    }, 500);
+  }
 
-//     function previous() {
-//       let sliderSection = document.querySelectorAll(
-//         `.card-imagen-${index + 1}`
-//       )[0];
-//       let sliderSectionLast = sliderSection[sliderSection.length - 1];
-//       slider.style.marginLeft = "0";
-//       slider.style.transition = "all 0.5s";
-//       setTimeout(() => {
-//         slider.style.transition = "none";
-//         slider.insertAdjacentElement("afterbegin", sliderSectionLast);
-//         slider.style.marginLeft = "-100%";
-//       }, 500);
-//     }
+  btnRight1.addEventListener("click", () => {
+    next();
+  });
 
-//     btnRight.addEventListener("click", () => {
-//       next();
-//     });
+  btnLeft1.addEventListener("click", () => {
+    previous();
+  });
 
-//     btnLeft.addEventListener("click", () => {
-//       previous();
-//     });
+  setInterval(() => {
+    previous();
+  }, 4000);
+});
 
-//     // setInterval(() => {
-//     //   next();
-//     // }, 4000);
-//   });
-// });
+
+const btnLeft2 = document.querySelector("#arrow-left-2");
+const btnRight2 = document.querySelector("#arrow-right-2");
+const slider2 = document.querySelectorAll("#slider-2");
+
+
+slider2.forEach((slider) => {
+  let sliderSection = document.querySelectorAll(".card-imagen-2");
+  let sliderSectionLast = sliderSection[sliderSection.length - 1];
+  slider.insertAdjacentElement("afterbegin", sliderSectionLast);
+
+  function next() {
+    let sliderSectionFirst = document.querySelectorAll(".card-imagen-2")[0];
+    slider.style.marginLeft = "-200%";
+    slider.style.transition = "all 0.5s";
+    setTimeout(() => {
+      slider.style.transition = "none";
+      slider.insertAdjacentElement("beforeend", sliderSectionFirst);
+      slider.style.marginLeft = "-100%";
+    }, 500);
+  }
+
+  function previous() {
+    let sliderSection = document.querySelectorAll(".card-imagen-2");
+    let sliderSectionLast = sliderSection[sliderSection.length - 1];
+    slider.style.marginLeft = "0";
+    slider.style.transition = "all 0.5s";
+    setTimeout(() => {
+      slider.style.transition = "none";
+      slider.insertAdjacentElement("afterbegin", sliderSectionLast);
+      slider.style.marginLeft = "-100%";
+    }, 500);
+  }
+
+  btnRight2.addEventListener("click", () => {
+    next();
+  });
+
+  btnLeft2.addEventListener("click", () => {
+    previous();
+  });
+
+  setInterval(() => {
+    next();
+  }, 4000);
+});
+
+const btnLeft3 = document.querySelector("#arrow-left-3");
+const btnRight3 = document.querySelector("#arrow-right-3");
+const slider3 = document.querySelectorAll("#slider-3");
+
+slider3.forEach((slider) => {
+  let sliderSection = document.querySelectorAll(".card-imagen-3");
+  let sliderSectionLast = sliderSection[sliderSection.length - 1];
+  slider.insertAdjacentElement("afterbegin", sliderSectionLast);
+
+  function next() {
+    let sliderSectionFirst = document.querySelectorAll(".card-imagen-3")[0];
+    slider.style.marginLeft = "-200%";
+    slider.style.transition = "all 0.5s";
+    setTimeout(() => {
+      slider.style.transition = "none";
+      slider.insertAdjacentElement("beforeend", sliderSectionFirst);
+      slider.style.marginLeft = "-100%";
+    }, 500);
+  }
+
+  function previous() {
+    let sliderSection = document.querySelectorAll(".card-imagen-3");
+    let sliderSectionLast = sliderSection[sliderSection.length - 1];
+    slider.style.marginLeft = "0";
+    slider.style.transition = "all 0.5s";
+    setTimeout(() => {
+      slider.style.transition = "none";
+      slider.insertAdjacentElement("afterbegin", sliderSectionLast);
+      slider.style.marginLeft = "-100%";
+    }, 500);
+  }
+
+  btnRight3.addEventListener("click", () => {
+    next();
+  });
+
+  btnLeft3.addEventListener("click", () => {
+    previous();
+  });
+
+  setInterval(() => {
+    previous();
+  }, 4000);
+});
+
 
 // Scroll-Header  \\
 let navBarContainer = document.querySelector(".navbar-container");
@@ -218,6 +302,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// Navigation Bar button \\
 btnNavOpenClosed.addEventListener("click", () => {
   navBarContainer.classList.toggle("navbar-container-visible");
   btnNavOpenClosed.children[0].classList.toggle("bi-list");

@@ -791,26 +791,50 @@ a {
   flex-direction: column;
   justify-content: space-evenly;
   color: #000000;
+  gap: 50px;
 }
 
 .formations-container {
+  width: 100%;
   display: flex;
   align-items: center;
-  width: 85%;
+  justify-content: space-around;
 }
 
-.Alura-container {
+.card-formation-1 {
+  width: 45%;
   display: flex;
   position: relative;
-  width: 90%;
   flex-direction: column;
   align-items: center;
+  padding: 15px;
 }
 
-.formation-academy-container {
+.card-formation-2 {
+  width: 45%;
   display: flex;
-  justify-content: center;
-  font-size: 34px;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+/* .card-formation-3{
+  width: 50%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  
+} */
+
+.formation-academy-container {
+  font-weight: 900;
+  padding: 20px;
+  font-size: 4rem;
+  color: #2b2b82;
+  text-align: center;
+  margin-top: 80px;
 }
 
 .formation-academy-container > h3 {
@@ -876,17 +900,17 @@ a {
 .bi-arrow-left-circle-fill {
   border-radius: 50%;
   position: absolute;
-  font-size: 2.8dvw;
-  color: white;
+  font-size: 4rem;
+  color: #ffffff78;
   cursor: pointer;
-  transition: transform 200ms ease-in-out;
   left: 0;
   bottom: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .bi-arrow-left-circle-fill:hover {
-  transform: scale(1.2);
-  background-color: #ffffff86;
+  transform: scale(1.1);
+  color: #ffffff;
 }
 .bi-arrow-left-circle-fill:active {
   transform: scale(0.8);
@@ -895,17 +919,17 @@ a {
 .bi-arrow-right-circle-fill {
   border-radius: 50%;
   position: absolute;
-  font-size: 2.8dvw;
-  color: white;
+  font-size: 4rem;
+  color: #ffffff78;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
   right: 0;
   bottom: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .bi-arrow-right-circle-fill:hover {
-  transform: scale(1.2);
-  background-color: #ffffff86;
+  transform: scale(1.1);
+  color: #ffffff;
 }
 .bi-arrow-right-circle-fill:active {
   transform: scale(0.8);
@@ -920,17 +944,17 @@ a {
 }
 
 .card-text-box {
-  font-size: 1vw;
+  font-size: 1.5rem;
   color: white;
   text-align: center;
   width: 100%;
 }
 
 .card-text-box h4 {
-  font-size: 2vw;
+  font-size: 2rem;
 }
 
-/********************************  Contact me */
+/***********************************Section - Contact me */
 .section-contact-me {
   width: 100%;
   height: 70dvh;
@@ -938,6 +962,7 @@ a {
   align-items: center;
   justify-content: center;
   background-color: #2a2929;
+
   background: linear-gradient(black, #2a2929);
 }
 
@@ -1013,11 +1038,11 @@ a {
 }
 
 .info-text-container button:hover {
-  background-color: #2e2e98;
+  background-color: #3f3ffc;
 }
 
 .info-text-container button:active {
-  background-color: #0202f8;
+  background-color: #7e7f7f;
 }
 
 /******************************** footer  */
@@ -1335,12 +1360,14 @@ footer .copy-icon {
 
   /******************************** section formation */
   .formations-container {
-    width: 90%;
     flex-direction: column;
-    gap: 30px;
   }
 
-  .Alura-container {
+  .card-formation-1 {
+    width: 60%;
+  }
+
+  .card-formation-2 {
     width: 60%;
   }
 
@@ -1353,9 +1380,20 @@ footer .copy-icon {
     border-radius: 20px;
   }
 
+  .card-text-container {
+    width: 90%;
+  }
+  .arrow-left > i {
+    font-size: 4rem;
+  }
+  .arrow-right > i {
+    font-size: 4rem;
+  }
+
   /******************************** section contact me */
   .section-contact-me {
     height: auto;
+    padding-top: 20px;
   }
 
   .contact-me-container {
@@ -1368,9 +1406,7 @@ footer .copy-icon {
   .info-text-container input {
   }
   .info-text-container button {
-    background-color: #0a599f;
-    cursor: pointer;
-    color: white;
+    font-size: 1.5rem;
   }
 }
 /* Style for Tablet and mobile devices landscape */
@@ -1627,12 +1663,14 @@ footer .copy-icon {
 
   /******************************** section formation */
   .formations-container {
-    width: 90%;
     flex-direction: column;
-    gap: 30px;
   }
 
-  .Alura-container {
+  .card-formation-1 {
+    width: 60%;
+  }
+
+  .card-formation-2 {
     width: 60%;
   }
 
@@ -1648,6 +1686,7 @@ footer .copy-icon {
   /******************************** section contact me */
   .section-contact-me {
     height: auto;
+    padding-top: 20px;
   }
 
   .contact-me-container {
@@ -1660,9 +1699,7 @@ footer .copy-icon {
   .info-text-container input {
   }
   .info-text-container button {
-    background-color: #0a599f;
-    cursor: pointer;
-    color: white;
+    font-size: 1.5rem;
   }
 }
 /* Style for Mobile devices */
